@@ -1,0 +1,109 @@
+// Global styling for this template 
+html, body {
+
+  height: 100% !important;
+  width: 100%;}
+
+
+
+body {
+  @include serif-font;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: $brand-01;
+}
+
+hr.light {
+  border-color: $white;
+}
+
+a {
+  color: $brand-01;
+  @include transition-all;
+  &:hover {
+    color: darken($brand-01, .1);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include sans-serif-font;
+  line-height: 2.3rem;
+}
+
+.bg-primary {
+  background-color: $brand-01 !important;
+}
+
+.bg-dark {
+  background-color: $gray-900 !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.text-faded {
+  color: fade-out($white, .3);
+}
+
+.text-masthead{
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+
+section {
+  padding: 7rem 0;
+}
+
+.section-heading {
+  margin-top: 0;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
+}
+
+
+#step2_red_gif, #step2_cur_gif, #step2_redesign, #step2_current {
+  -webkit-transition: height 1s ease-out; /* Safari */
+  transition: height 1s ease-out;
+}
+
+.StepActive{
+  color: $ui-05 !important;
+}
+
+#nav-ul-hide{
+  display:none;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active{
+  color: black !important;
+}

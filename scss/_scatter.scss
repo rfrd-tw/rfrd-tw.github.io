@@ -1,0 +1,24 @@
+.scatter {
+	display: block;
+	float:left;
+	margin: 1.5em 0.2em 1.5em 1em; 
+	width: 20em;
+	height: 20em;
+	border-left: 0.1em solid #D3D3D3;
+	float: left;
+}
+.scatter:nth-child(2n+1) {
+    clear: left;
+}
+.tooltip-scp {
+	width: 3em;
+	height: 3em;
+	background-color: #D3D3D3;
+    text-align: center;
+    font: 12px sans-serif;
+    position: absolute;
+}
+
+.scatter text {
+	fill:"#fff";
+}

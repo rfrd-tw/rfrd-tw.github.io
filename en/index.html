@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Taiwan Referendum 2018</title>
+  <meta property="og:title"
+  content="台灣公民投票 2018">
+  <meta property="og:description"
+  content="台灣公民投票資訊視覺化" />
+  <meta property="og:image" content="" />
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <!-- Bootstrap JS and CSS + jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Custom fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+
+  <!-- Bootstrap datepicker JS and CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"></link>
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- D3JS -->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+  
+
+</head>
+
+<body>
+
+<!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Taiwan Referendum 2018</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div id="nav-ul-hide">
+      <ul class="navbar-nav mr-auto ml-5">
+          <li class="nav-item active" onclick="prop_func(0);return false;"><a class="nav-link" href="#viz">07</a></li>
+          <li class="nav-item" onclick="prop_func(1);return false;"><a class="nav-link" href="#viz">08</a></li>
+          <li class="nav-item" onclick="prop_func(2);return false;"><a class="nav-link" href="#viz">09</a></li>
+          <li class="nav-item" onclick="prop_func(3);return false;"><a class="nav-link" href="#viz">10</a></li>
+          <li class="nav-item" onclick="prop_func(4);return false;"><a class="nav-link" href="#viz">11</a></li>
+          <li class="nav-item" onclick="prop_func(5);return false;"><a class="nav-link" href="#viz">12</a></li>
+          <li class="nav-item" onclick="prop_func(6);return false;"><a class="nav-link" href="#viz">13</a></li>
+          <li class="nav-item" onclick="prop_func(7);return false;"><a class="nav-link" href="#viz">14</a></li>
+          <li class="nav-item" onclick="prop_func(8);return false;"><a class="nav-link" href="#viz">15</a></li>
+          <li class="nav-item" onclick="prop_func(9);return false;"><a class="nav-link" href="#viz">16</a></li>
+      </ul>  
+      </div>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="../">ZH-TW</a></li>
+      </ul>  
+    </div>
+  </nav>
+
+<!-- masthead -->
+<div id="hmasthead">
+  <header class="masthead text-center d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1>
+            <strong>Taiwan Referendum 2018</strong>
+          </h1>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="mb-5 text-masthead">
+              A multi-question referendum was held in Taiwan on 24 November 2018 alongside local elections. We hope to help you understand how referendum works.
+          </p>
+        </div>
+        <div class="col-lg-8 mx-auto text-white" id="nav-rfrd">
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);return false;" href="#viz">07</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);return false;" href="#viz">08</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);return false;" href="#viz">09</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);return false;" href="#viz">10</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);return false;" href="#viz">11</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);return false;" href="#viz">12</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);return false;" href="#viz">13</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);return false;" href="#viz">14</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);return false;" href="#viz">15</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);return false;" href="#viz">16</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="pt-5" id="canvas">
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+
+      <g transform="translate(-600,-410) scale(8 8)">
+          <polygon stroke-miterlimit="10" fill="#e6f84d" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
+          <animate id="animation-to-check"  attributeName="points" dur="16000ms" values="
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+          </animate>
+          </polygon>
+      </g>
+
+      <g transform="translate(-600,-400) scale(8 8)">
+          <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
+          <animate id="animation-to-check"  attributeName="points" dur="16000ms" values="
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+          </animate>
+          </polygon>
+      </g>
+
+
+      <g transform="translate(260,410) scale(3 3)">
+          <polygon stroke-miterlimit="10" fill="#e6f84d" points="14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8">
+          <animate id="animation-to-check"  attributeName="points" dur="4000ms" values="
+          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
+          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
+          2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
+          2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+          </animate>
+          </polygon>
+      </g>  
+
+      <g transform="translate(250,400) scale(3 3)">
+        <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8">
+        <animate id="animation-to-check"  attributeName="points" dur="4000ms" values="
+        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
+        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
+        2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
+        2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
+        1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+        1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
+        2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+        2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+        </animate>
+        </polygon>
+      </g>  
+
+      <g transform="translate(860,0) scale(5 5)">
+          <polygon stroke-miterlimit="10" fill="#e6f84d" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
+          <animate id="animation-to-check"  attributeName="points" dur="8000ms" values="
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+          </animate>
+          </polygon>
+      </g>
+
+      <g transform="translate(850,-10) scale(5 5)">
+          <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
+          <animate id="animation-to-check"  attributeName="points" dur="8000ms" values="
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
+          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
+          </animate>
+          </polygon>
+      </g>
+
+
+    </svg>  
+
+
+  </div>
+</div>
+
+<!-- Viz -->
+  <section class="bg-dark" id="viz">
+    
+    <!-- Map -->
+    <div class="col-lg-10 col-sm-12 mx-auto mb-5">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 px-3">
+          <div class="col-lg-12 col-sm-12 px-0">
+            <div class="row px-3 d-flex align-items-center">
+              <div class="col-lg-4 col-sm-4 px-2" id="prop_num_bg">
+                <div class="section-heading text-black my-5 align-bottom" id="prop_num">
+                  07
+                </div>
+              </div>
+              <div class="col-lg-8 col-sm-8 px-4">
+                <h2 class="section-heading text-white text-left" id="prop_name">反空污公投</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-white">
+        <div class="col-lg-4 col-sm-6 px-3">
+          <div class="row mb-4 px-3">
+            <div class="row px-3">
+              <div class="project-category text-faded">
+                <p>公投主文</p>
+              </div>
+              <div class="question py-3"><h4>你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？</h4></div>
+              <div class="project-step_desc" id="step2_current">
+                <p>
+                  卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我
+                </p>
+              </div>
+              <div class="row  d-flex align-items-center">
+                <div class="col voteCount"><h2>1,426,523</h2></div>
+                <div class="col text-faded text"><small>位公民投下同意票</small></div>
+              </div>
+              <div class="row  d-flex align-items-center">
+                <div class="col-9 text-faded"><small>達到全體投票權人的</small></div>
+                <div class="col-3 voteRatio"><h4>7%</h4></div>
+              </div>
+              <div class="row d-flex align-items-center w-100">
+                 <!-- <div class="arc-bar">
+                    <div class="full-arc overlay">
+                      <div class="cover-1">
+                        <div class="cover-2"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="state"></h2>
+                  <input type="range" min="0" max="100" class="slider">-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-6 px-3">
+          <div class="row px-3">
+            <div class="project-category text-faded col-lg-12 px-0">
+              <p>台灣支持率分佈</p>
+            </div>
+            <div class="project-step_desc mb-4" id="step2_redesign">
+            </div>
+            <div class="bg-primary w-100 mt-2"><iframe src="https://plotdb.io/v/chart/19356" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- step4 -->
+    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white ">
+      <div class="row">
+        <div class="col-lg-8 col-sm-6 px-3">
+          <h2 class="section-heading text-left py-3">地方支持率與人口特徵</h2>
+          <div class="project-category text-faded">
+            <p>副標題拉拉</p>
+          </div>
+          <div class="project-step_desc py-3">
+              卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="scatter-block">
+          <div id="scp0" class="scatter"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- concept -->
+  <section class="bg-white" id="concept">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="section-heading">其他資訊（尚未確定內容）</h1>
+          <hr class="my-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <img class="img-fluid" src='https://picsum.photos/1800/1200/?random'>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-md-12 text-left mx-auto">
+          <div class="service-box mt-5 pt-5 mx-5 sr-button" style="margin-left: -15%;">
+            <h2>的味意有班手</h2>
+            <br>
+            <p>卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我。只天識旅之再，富中後今好成識地我說個的微快年出成去朋方？</p>
+            <br>
+            <h2>經表管的受時</h2>
+            <br>
+            <p>公平差不：上的排痛，將成物中西我長引色直神空。足日下的童教得活賽化感單來旅受客同令出什……家東女的……技氣坡。近紅然這這不小很管女電。與的室漸以定光經表管的受時，養水紅。在用劇大。金終行自，步經冷表我質的正我展的。導地十際自：年合果，整水。</p>
+
+            <p>我學也：市養一現來曾巴動代文課音書覺；飯為底流數可？陽人百那字護，語此現夫上護活子。久得信歡太臺次面單程身終！總區提件日的布生病，治太我後自世修興，引個叫教眾保間工時母費當各！不園本升出社評語點實中，地論不我不那從岸之戰以及同子希府事示的心家超後理易作此獨……轉一座法人從再了一，什不院預的，觀都真戲我成力己也對業件方一的洋也華之學。</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="text-white bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">About this project</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mx-auto text-center">
+        
+        <a href="https://google.com">Github Repository</a>.
+    </div>
+  </div>
+  </section>
+
+
+  <noscript>
+    <style type="text/css">
+      section.menu {
+        display: none;
+      }
+      section.maincontenu {
+        display: none;
+      }
+      .noscriptmsg {
+        display: block;
+        margin: 30px;
+        font-size: 30px;
+        line-height: 34px;
+      }
+    </style>
+    <div class="noscriptmsg">
+      <h2>Oops!</h2><br>This website contains complex visualizations that are not working if Javascript is not enabled. For an optimal navigation experience, go to your browser preferences and allow Javascript.
+    </div>
+  </noscript>
+
+
+  <!-- Scatter plot -->
+  <script src="js/scatter.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Javascripts for UI -->
+  <script src="js/creative.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/json.js"></script>
+  <script src="js/arcbar.js"></script>
+
+    
+
+
+</body>
+</html>

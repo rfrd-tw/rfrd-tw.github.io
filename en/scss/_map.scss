@@ -1,0 +1,123 @@
+// Styling for the portfolio section
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+  .portfolio-box-caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: $white;
+    background: fade-out($brand-01, .1);
+    @include transition-all;
+    .portfolio-box-caption-content {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      text-align: center;
+      .project-category,
+      .project-name {
+        padding: 0 15px;
+        @include sans-serif-font;
+      }
+    }
+  }
+  &:hover {
+    .portfolio-box-caption {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (min-width: 768px) {
+    .portfolio-box-caption {
+      .portfolio-box-caption-content {
+        .project-category {
+          font-size: 16px;
+        }
+        .project-name {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.project-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.project-name {
+  font-size: 18px;
+}
+.project-step_name {
+  font-size: 24px;
+  @include sans-serif-font;
+}
+.project-step_desc {
+  font-size: 14px;
+}
+
+#prop_num {
+  font-size: 65px;
+  @include sans-serif-font;
+  position:relative;
+  top:0px;
+  padding-top: 60px;
+  height: 150px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#prop_num_bg {
+  background-image: url("../img/box_yellow.svg");
+  background-position: center 50%;
+  background-size: contain;
+  overflow: visible;
+  background-repeat:  no-repeat;
+}
+
+#prop_name{
+  padding-top: 70px;
+}
+
+
+/*-arc-bar-*/
+
+.arc-bar {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform: rotate(45deg);
+  margin: 55px;
+}
+
+.full-arc {
+  width: inherit;
+  height: inherit;
+}
+
+.full-arc div {
+  width: inherit;
+  height: inherit;
+  border-radius: 99999px;
+}
+
+
+
+.slider {
+  width: 300px;
+}
+
+.state {
+  width: 300px;
+  text-align: center;
+}
