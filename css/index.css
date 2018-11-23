@@ -468,16 +468,19 @@ polygon {
 
 .scatter {
   display: block;
-  float: left;
-  margin: 1.5em 0.2em 1.5em 1em;
+  float:left;
   width: 20em;
-  height: 20em;
-  border-left: 0.1em solid #D3D3D3;
-  float: left;
+  height: 22em;
 }
 
 .scatter:nth-child(2n+1) {
-  clear: left;
+    clear: left;
+}
+
+.scatter-plot {
+  width: 20em;
+  height: 20em;
+  margin: 0.3em 0.3em 0.4em 1em;
 }
 
 .tooltip-scp {

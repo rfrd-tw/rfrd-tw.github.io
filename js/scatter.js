@@ -1,6 +1,8 @@
 d3.csv("data/data.csv").then(function(data) {
+
+	console.log(data[0]);
 	const draw_scp = (vote, ...ind_vars) => {
-		var div = document.getElementsByClassName("scatter")[0];
+		var div = document.getElementsByClassName("scatter-plot")[0];
 
 		var width = parseInt(getComputedStyle(div).width.replace(/px/g, "")),
 		height = parseInt(getComputedStyle(div).height.replace(/px/g, "")),
@@ -11,6 +13,7 @@ d3.csv("data/data.csv").then(function(data) {
 			"bottom": parseInt(margins[2]),
 			"left": parseInt(margins[3])
 		};
+		console.log(width, height, margins);
 
 		tooltip = d3.select("body").append("div")
         .attr("class", "tooltip-scp")
@@ -32,19 +35,31 @@ d3.csv("data/data.csv").then(function(data) {
 
 		ind_vars.forEach(function(ind_var, i) {
 
-			var scpdiv;
+			var scpDiv, titleDiv;
 			if(i===0) {
-				scpdiv = d3.select("#scp0");
+				scpDiv = d3.select("#scp0-plot");
+				titleDiv = d3.select("#scp0-title").text(ind_var);
 			} else {
-				scpdiv = d3.select("#scatter-block")
+				scatterDiv = d3.select("#scatter-block")
 				.append("div")
 				.attr("id", "scp"+i)
 				.attr("class", "scatter");
+
+				titleDiv = scatterDiv
+				.append("div")
+				.attr("id", "scp"+i+"-title")
+				.attr("class", "scatter-title")
+				.text(ind_var);
+
+				scpDiv = scatterDiv
+				.append("div")
+				.attr("id", "scp"+i+"-plot")
+				.attr("class", "scatter");
 			}
 
-			const svg = scpdiv.append("svg")
+			const svg = scpDiv.append("svg")
 			.attr("width", width + margin.left + margin.right)
-			.attr("height", height + margin.top + margin.bottom + 10)
+			.attr("height", height + margin.top + margin.bottom)
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -77,9 +92,8 @@ d3.csv("data/data.csv").then(function(data) {
 				.attr("y", margin.top)
 				.attr("dy", "0.32em")
 				.attr("text-anchor", "start")
-				.attr("font-weight", "bold")
-				.text(ind_var))
-			
+				.attr("font-weight", "bold"));
+
 			svg.append("g")
 			.call(xAxis);
 
