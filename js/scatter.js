@@ -1,19 +1,15 @@
 d3.csv("data/data.csv").then(function(data) {
 
-	console.log(data[0]);
 	const draw_scp = (vote, ...ind_vars) => {
-		var div = document.getElementsByClassName("scatter-plot")[0];
-
-		var width = parseInt(getComputedStyle(div).width.replace(/px/g, "")),
-		height = parseInt(getComputedStyle(div).height.replace(/px/g, "")),
-		margins = getComputedStyle(div).margin.replace(/px/g, "").split(" "),
+		var width = $('.scatter-plot').width(),
+		height = $('.scatter-plot').height(),
 		margin = {
-			"top": parseInt(margins[0]),
-			"right": parseInt(margins[1]),
-			"bottom": parseInt(margins[2]),
-			"left": parseInt(margins[3])
+			"top": $('.scatter-plot').css('margin-top').replace(/px/g, ""),
+			"right": $('.scatter-plot').css('margin-right').replace(/px/g, ""),
+			"bottom": $('.scatter-plot').css('margin-bottom').replace(/px/g, ""),
+			"left": $('.scatter-plot').css('margin-left').replace(/px/g, "")
 		};
-		console.log(width, height, margins);
+		console.log(width, height, margin);
 
 		tooltip = d3.select("body").append("div")
         .attr("class", "tooltip-scp")
