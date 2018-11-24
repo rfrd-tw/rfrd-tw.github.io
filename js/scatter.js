@@ -1,13 +1,13 @@
 d3.csv("data/data.csv").then(function(data) {
 
 	const draw_scp = (vote, ...ind_vars) => {
-		var width = $('.scatter-plot').width(),
-		height = $('.scatter-plot').height(),
+		var width = parseInt($('.scatter-plot').width()),
+		height = parseInt($('.scatter-plot').height()),
 		margin = {
-			"top": $('.scatter-plot').css('margin-top').replace(/px/g, ""),
-			"right": $('.scatter-plot').css('margin-right').replace(/px/g, ""),
-			"bottom": $('.scatter-plot').css('margin-bottom').replace(/px/g, ""),
-			"left": $('.scatter-plot').css('margin-left').replace(/px/g, "")
+			"top": parseInt($('.scatter-plot').css('margin-top').replace(/px/g, "")),
+			"right": parseInt($('.scatter-plot').css('margin-right').replace(/px/g, "")),
+			"bottom": parseInt($('.scatter-plot').css('margin-bottom').replace(/px/g, "")),
+			"left": parseInt($('.scatter-plot').css('margin-left').replace(/px/g, ""))
 		};
 		console.log(width, height, margin);
 
