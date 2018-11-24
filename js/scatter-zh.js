@@ -1,4 +1,4 @@
-d3.csv("data/data_en.csv").then(function(data) {
+d3.csv("data/data_zh.csv").then(function(data) {
 
 	const draw_scp = (vote, ...ind_vars) => {
 		var width = parseInt($('.scatter-plot').width()),
@@ -177,5 +177,5 @@ d3.csv("data/data_en.csv").then(function(data) {
 
 		//return svg.node();
 	}
-	draw_scp("vote7", "College (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
+	draw_scp("vote7", "大學畢業比例(%)", "曾經結婚比例(%)", "年齡中位數", "所得中位數（萬元）"); 
 });

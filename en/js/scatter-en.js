@@ -1,15 +1,13 @@
-d3.csv("data/data.csv").then(function(data) {
-	const draw_scp = (vote, ...ind_vars) => {
-		var div = document.getElementsByClassName("scatter")[0];
+d3.csv("data/data_en.csv").then(function(data) {
 
-		var width = parseInt(getComputedStyle(div).width.replace(/px/g, "")),
-		height = parseInt(getComputedStyle(div).height.replace(/px/g, "")),
-		margins = getComputedStyle(div).margin.replace(/px/g, "").split(" "),
+	const draw_scp = (vote, ...ind_vars) => {
+		var width = parseInt($('.scatter-plot').width()),
+		height = parseInt($('.scatter-plot').height()),
 		margin = {
-			"top": parseInt(margins[0]),
-			"right": parseInt(margins[1]),
-			"bottom": parseInt(margins[2]),
-			"left": parseInt(margins[3])
+			"top": parseInt($('.scatter-plot').css('margin-top').replace(/px/g, "")),
+			"right": parseInt($('.scatter-plot').css('margin-right').replace(/px/g, "")),
+			"bottom": parseInt($('.scatter-plot').css('margin-bottom').replace(/px/g, "")),
+			"left": parseInt($('.scatter-plot').css('margin-left').replace(/px/g, ""))
 		};
 
 		tooltip = d3.select("body").append("div")
@@ -18,7 +16,7 @@ d3.csv("data/data.csv").then(function(data) {
 
         // x(vote) & z(color-mapping) are common for all plots
 		x = d3.scaleLinear()
-		.domain([d3.min(data, d => (Number(d[vote])-0.05)), d3.max(data, d => (Number(d[vote])+0.05))]).nice()
+		.domain([d3.min(data, d => (Number(d[vote])-0.02)), d3.max(data, d => (Number(d[vote])+0.02))]).nice()
 		.range([margin.left, width - margin.right]);
 
 		// Add the x-axis.
@@ -28,21 +26,34 @@ d3.csv("data/data.csv").then(function(data) {
 		.call(g => g.select(".domain").remove());
 
 		z = d3.scaleThreshold()
-		.range(["#355C7D", "#F67280"]);
+		.domain(0.5)
+		.range(["#e83e8c", "#9a55fc"]);
 
 		ind_vars.forEach(function(ind_var, i) {
 
-			var scpdiv;
+			var scpDiv, titleDiv;
 			if(i===0) {
-				scpdiv = d3.select("#scp0");
+				scpDiv = d3.select("#scp0-plot");
+				titleDiv = d3.select("#scp0-title").text(ind_var);
 			} else {
-				scpdiv = d3.select("#scatter-block")
+				scatterDiv = d3.select("#scatter-block")
 				.append("div")
 				.attr("id", "scp"+i)
 				.attr("class", "scatter");
+
+				titleDiv = scatterDiv
+				.append("div")
+				.attr("id", "scp"+i+"-title")
+				.attr("class", "scatter-title")
+				.text(ind_var);
+
+				scpDiv = scatterDiv
+				.append("div")
+				.attr("id", "scp"+i+"-plot")
+				.attr("class", "scatter");
 			}
 
-			const svg = scpdiv.append("svg")
+			const svg = scpDiv.append("svg")
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
 			.append("g")
@@ -55,7 +66,7 @@ d3.csv("data/data.csv").then(function(data) {
 			var yAxisSet1 = d3.axisLeft(y), yAxisSet2;
 			if (d3.max(data, d => (Number(d[ind_var]))) < 1 ) {
 				yAxisSet2 = yAxisSet1.tickFormat(d3.format(".0%"));
-				y.domain([0, d3.max(data, d => (Number(d[ind_var])+0.1))]).nice();
+				y.domain([d3.min(data, d => (Number(d[ind_var])-0.02)), d3.max(data, d => (Number(d[ind_var])+0.001))]).nice();
 			} else {
 				yAxisSet2 = yAxisSet1;
 				y.domain([d3.min(data, d => (Number(d[ind_var])-0.02)), d3.max(data, d => (Number(d[ind_var])+0.1))]).nice();
@@ -70,23 +81,22 @@ d3.csv("data/data.csv").then(function(data) {
 				.filter(d => d === 0)
 				.clone()
 				.attr("x2", width - margin.right - margin.left)
-				.attr("stroke", "#ccc"))
+				.attr("stroke-opacity", 0))
 			.call(g => g.append("text")
 				.attr("fill", "#000")
 				.attr("x", 5)
 				.attr("y", margin.top)
 				.attr("dy", "0.32em")
 				.attr("text-anchor", "start")
-				.attr("font-weight", "bold")
-				.text(ind_var))
-			
+				.attr("font-weight", "bold"));
+
 			svg.append("g")
 			.call(xAxis);
 
 			svg.append("g")
 			.call(yAxis);
 
-			svg.append("g")
+			circle = svg.append("g")
 			.attr("stroke", "#000")
 			.attr("stroke-opacity", 0.2)
 			.selectAll("circle")
@@ -101,6 +111,9 @@ d3.csv("data/data.csv").then(function(data) {
 			.on("click", click)
 			.on("mouseout", mouseout);
 
+			// hide null
+			circle.style("display", function(d) { return d[vote] == "NA" ? "none" : null; });
+
 			svg.append("line")
 			.attr("x1", x(0.5))  
 			.attr("y1", 0)
@@ -111,15 +124,24 @@ d3.csv("data/data.csv").then(function(data) {
 			.style("fill", "none");
 		}); // end of ind_vars.forEach()
 
+		d3.selection.prototype.moveToFront = function() {
+			return this.each(function(){
+				this.parentNode.appendChild(this);
+			});
+		};
+
 		function mouseover(d) {
 			d3.selectAll("#"+d.site_id)
 			.attr("r", 6)
-			.attr("fill", "#f9fe6c");
+			.attr("fill", "#f9fe6c")
+			.moveToFront();
 
 			tooltip
 			.text(function () { return d.site_id;})
 			.style("left", (d3.event.pageX + 10) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
+
+            console.log(d);
 
 			tooltip
 			.transition()
@@ -155,5 +177,5 @@ d3.csv("data/data.csv").then(function(data) {
 
 		//return svg.node();
 	}
-	draw_scp("vote14", "college_p", "divorce_p", "median_age", "avg_age"); 
+	draw_scp("vote7", "College (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
 });
