@@ -1,3 +1,5 @@
+var vote_num = 7;
+
 d3.csv("data/data_en.csv").then(function(data) {
 
 	const draw_scp = (vote, ...ind_vars) => {
@@ -177,5 +179,5 @@ d3.csv("data/data_en.csv").then(function(data) {
 
 		//return svg.node();
 	}
-	draw_scp("vote7", "College (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
+	draw_scp("vote"+vote_num, "College (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
 });

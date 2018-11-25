@@ -1,3 +1,5 @@
+var vote_num = 7;
+
 d3.csv("data/data_zh.csv").then(function(data) {
 
 	const draw_scp = (vote, ...ind_vars) => {
@@ -177,5 +179,5 @@ d3.csv("data/data_zh.csv").then(function(data) {
 
 		//return svg.node();
 	}
-	draw_scp("vote7", "大學畢業比例(%)", "曾經結婚比例(%)", "年齡中位數", "所得中位數（萬元）"); 
+	draw_scp("vote"+vote_num, "大學畢業比例(%)", "曾經結婚比例(%)", "年齡中位數", "所得中位數（萬元）"); 
 });
