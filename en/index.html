@@ -7,11 +7,19 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Taiwan Referendum 2018</title>
   <meta property="og:title"
-  content="台灣公民投票 2018">
+  content="Taiwan Referendum 2018">
   <meta property="og:description"
-  content="台灣公民投票資訊視覺化" />
+  content="Data visualization of the results of Taiwan Referendum 2018" />
   <meta property="og:image" content="" />
-  <!-- Bootstrap -->
+  <!-- ICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#fc00f6">
+  <meta name="msapplication-TileColor" content="#fc00f6">
+  <meta name="theme-color" content="#ffffff"> 
+
   <!-- Latest compiled and minified CSS -->
   <!-- Bootstrap JS and CSS + jQuery -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
@@ -22,18 +30,21 @@
   <!-- Custom fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 700" rel="stylesheet">
+
+
+
 
   <!-- Bootstrap datepicker JS and CSS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"></link>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- D3JS -->
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
   
 
@@ -43,27 +54,27 @@
 
 <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">Taiwan Referendum 2018</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">台灣公民投票 2018</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div id="nav-ul-hide">
       <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item active" onclick="prop_func(0);return false;"><a class="nav-link" href="#viz">07</a></li>
-          <li class="nav-item" onclick="prop_func(1);return false;"><a class="nav-link" href="#viz">08</a></li>
-          <li class="nav-item" onclick="prop_func(2);return false;"><a class="nav-link" href="#viz">09</a></li>
-          <li class="nav-item" onclick="prop_func(3);return false;"><a class="nav-link" href="#viz">10</a></li>
-          <li class="nav-item" onclick="prop_func(4);return false;"><a class="nav-link" href="#viz">11</a></li>
-          <li class="nav-item" onclick="prop_func(5);return false;"><a class="nav-link" href="#viz">12</a></li>
-          <li class="nav-item" onclick="prop_func(6);return false;"><a class="nav-link" href="#viz">13</a></li>
-          <li class="nav-item" onclick="prop_func(7);return false;"><a class="nav-link" href="#viz">14</a></li>
-          <li class="nav-item" onclick="prop_func(8);return false;"><a class="nav-link" href="#viz">15</a></li>
-          <li class="nav-item" onclick="prop_func(9);return false;"><a class="nav-link" href="#viz">16</a></li>
+          <li class="nav-item" onclick="prop_func(0);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
+          <li class="nav-item" onclick="prop_func(1);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
+          <li class="nav-item" onclick="prop_func(2);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
+          <li class="nav-item" onclick="prop_func(3);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
+          <li class="nav-item" onclick="prop_func(4);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
+          <li class="nav-item" onclick="prop_func(5);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
+          <li class="nav-item" onclick="prop_func(6);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
+          <li class="nav-item" onclick="prop_func(7);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
+          <li class="nav-item" onclick="prop_func(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
+          <li class="nav-item" onclick="prop_func(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
       </ul>  
       </div>
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="../">ZH-TW</a></li>
+          <li class="nav-item active"><a class="nav-link" href="./en/index.html">EN</a></li>
       </ul>  
     </div>
   </nav>
@@ -75,181 +86,96 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1>
-            <strong>Taiwan Referendum 2018</strong>
+            <strong>台灣公民投票 2018</strong>
           </h1>
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
           <p class="mb-5 text-masthead">
-              A multi-question referendum was held in Taiwan on 24 November 2018 alongside local elections. We hope to help you understand how referendum works.
-          </p>
+            2018年11月24日，一場伴隨地方選舉的公投結束了。<br>我們希望可以幫助您了解公投結果。</p>
         </div>
         <div class="col-lg-8 mx-auto text-white" id="nav-rfrd">
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);return false;" href="#viz">07</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);return false;" href="#viz">08</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);return false;" href="#viz">09</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);return false;" href="#viz">10</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);return false;" href="#viz">11</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);return false;" href="#viz">12</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);return false;" href="#viz">13</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);return false;" href="#viz">14</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);return false;" href="#viz">15</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);return false;" href="#viz">16</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反空污公投">07</button>
+            </a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反燃煤電廠">08</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反日本核食">09</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="民法限異性婚">10</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反性平教育">11</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚立專法">12</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="東奧正名">13</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚修民法">14</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="性平教育">15</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="以核養綠">16</a>
         </div>
       </div>
     </div>
   </header>
-  <div class="pt-5" id="canvas">
- 
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-
-      <g transform="translate(-600,-410) scale(8 8)">
-          <polygon stroke-miterlimit="10" fill="#e6f84d" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
-          <animate id="animation-to-check"  attributeName="points" dur="16000ms" values="
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-          </animate>
-          </polygon>
-      </g>
-
-      <g transform="translate(-600,-400) scale(8 8)">
-          <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
-          <animate id="animation-to-check"  attributeName="points" dur="16000ms" values="
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-          </animate>
-          </polygon>
-      </g>
-
-
-      <g transform="translate(260,410) scale(3 3)">
-          <polygon stroke-miterlimit="10" fill="#e6f84d" points="14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8">
-          <animate id="animation-to-check"  attributeName="points" dur="4000ms" values="
-          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
-          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
-          2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
-          2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-          </animate>
-          </polygon>
-      </g>  
-
-      <g transform="translate(250,400) scale(3 3)">
-        <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8">
-        <animate id="animation-to-check"  attributeName="points" dur="4000ms" values="
-        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
-        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8; 
-        2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
-        2 152.9 8.3 39.3 33.3 1.8 52 8 57.3 41.4 45.8 74.7 27 86.2 2 152.9; 
-        1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-        1.7 26.9 52.8 2.4 52.8 55.6 94.3 62 96.4 107.7 48.5 74.7 12.3 83.2 1.7 26.9; 
-        2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-        2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-        14.6 49.8 10 2 159.3 39.8 155.4 67 116.9 61.1 72.4 94.9 2 86.9 14.6 49.8"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-        </animate>
-        </polygon>
-      </g>  
-
-      <g transform="translate(860,0) scale(5 5)">
-          <polygon stroke-miterlimit="10" fill="#e6f84d" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
-          <animate id="animation-to-check"  attributeName="points" dur="8000ms" values="
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-          </animate>
-          </polygon>
-      </g>
-
-      <g transform="translate(850,-10) scale(5 5)">
-          <polygon stroke-miterlimit="10" stroke="#9a55fc" fill="transparent" points="19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6">
-          <animate id="animation-to-check"  attributeName="points" dur="8000ms" values="
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2;
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          2.4 70 83.2 1.9 136.4 40.2 174.7 27.4 167.3 104 103.4 47.6 13 78.5 2.4 70;
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          3.4 57.9 41.7 35.6 57.7 1.5 81.1 2.6 121.5 39.8 127.9 75 63 81.3 3.4 57.9; 
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          19.5 117.6 2.2 86.6 72.8 63.1 106.2 3.6 127.3 64.3 153.3 86.6 144.6 116.3 19.5 117.6;
-          28.2 145.2 1.7 111.7 40.5 14.7 107.6 1.7 145.7 75.1 140.2 110.8 79 106.2 28.2 145.2"  keyTimes="0;0.125;0.25;0.375;0.5;0.675;0.75;0.875;1" repeatCount="indefinite">
-          </animate>
-          </polygon>
-      </g>
-
-
-    </svg>  
-
-
+  <div class="pt-5 bg-light" id="canvas">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col">
+          <img src="img/lefthand.svg" class="rotating-1">
+        </div>
+        <div class="col">
+            <img src="img/lefthand.svg" class="rotating-2">
+        </div>
+        <div class="col">
+            <img src="img/righthand.svg" class="rotating-3">
+          </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- Viz -->
+<!-- VIZ -->
   <section class="bg-dark" id="viz">
     
-    <!-- Map -->
-    <div class="col-lg-10 col-sm-12 mx-auto mb-5">
+    <!-- MAP -->
+    <div class="col-xl-10 col-lg-11 mx-auto mb-5">
+
+      <!-- TITLE -->
       <div class="row">
-        <div class="col-lg-4 col-sm-6 px-3">
-          <div class="col-lg-12 col-sm-12 px-0">
-            <div class="row px-3 d-flex align-items-center">
-              <div class="col-lg-4 col-sm-4 px-2" id="prop_num_bg">
-                <div class="section-heading text-black my-5 align-bottom" id="prop_num">
-                  07
-                </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="row d-flex align-items-top">
+            <div class="mx-auto" id="prop_num_width">
+              <div class="ml-3" id="prop_num_bg"></div>
+              <div class="section-heading text-black my-1 ml-3 align-bottom" id="prop_num">
+                07
               </div>
-              <div class="col-lg-8 col-sm-8 px-4">
-                <h2 class="section-heading text-white text-left" id="prop_name">反空污公投</h2>
-              </div>
+            </div>
+            <div class="col">
+              <h2 class="section-heading text-white" id="prop_name">反空污公投</h2>
             </div>
           </div>
         </div>
       </div>
 
       <div class="row text-white">
-        <div class="col-lg-4 col-sm-6 px-3">
-          <div class="row mb-4 px-3">
-            <div class="row px-3">
-              <div class="project-category text-faded">
+        <div class="col-lg-4 col-sm-12">
+          <div class="row my-4">
+            <div class="col">
+              <div class="small-title text-faded">
                 <p>公投主文</p>
               </div>
-              <div class="question py-3"><h4>你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？</h4></div>
-              <div class="project-step_desc" id="step2_current">
-                <p>
-                  卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我
-                </p>
+              <div class="question py-3:">
+                <h4 class="pb-3" id="full_case">
+                    你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？
+                </h4> 
+              </div>
+              <div class="project-step_desc border-bottom pb-4" id="step2_current">
+                  <!-- 提案理由 -->
+                  <a href="#reason"><button type="button" class="btn btn-primary">提案理由</button></a>
+        
+              </div>
+              <div class="row  d-flex align-items-center pt-4">
+                <div class="col voteCount"><small class="text-faded text">同意票數</small><h2>1,426,523</h2></div>
+                <div class="col votCOunt"><small class="text-faded text">不同意票數</small><h2>723,241</h2></div>
               </div>
               <div class="row  d-flex align-items-center">
-                <div class="col voteCount"><h2>1,426,523</h2></div>
-                <div class="col text-faded text"><small>位公民投下同意票</small></div>
-              </div>
-              <div class="row  d-flex align-items-center">
-                <div class="col-9 text-faded"><small>達到全體投票權人的</small></div>
-                <div class="col-3 voteRatio"><h4>7%</h4></div>
-              </div>
+                  <div class="col voteCount"><small class="text-faded text">投票權人數</small><h4>19,826,523</h4></div>
+                  <div class="col voteCount"><small class="text-faded text">同意票對投票權人數百分比</small><h2>23%</h2></div>
+
+                </div>
               <div class="row d-flex align-items-center w-100">
                  <!-- <div class="arc-bar">
                     <div class="full-arc overlay">
@@ -264,14 +190,25 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-8 col-sm-6 px-3">
-          <div class="row px-3">
-            <div class="project-category text-faded col-lg-12 px-0">
-              <p>台灣支持率分佈</p>
+        <div class="col-lg-1 col-sm-12"></div>
+        <div class="col-lg-7 col-sm-12">
+          <div class="row my-4">
+            <div class="col">
+              <div class="small-title text-faded">
+                <p>台灣支持率分佈</p>
+              </div>
+              <small class="text-faded text">同意票數減不同意票數/總有效票數* 100%</small><br>
+              <small>
+                <span class="px-2 mr-1 bg-map1 text-white rounded"></span>反對多於支持20%以上
+                <span class="px-2 mx-1 bg-map2 text-white rounded"></span>反對多於支持10~20%
+                <span class="px-2 mx-1 bg-map3 text-white rounded"></span>反對多於支持0~10%<br>
+                <span class="px-2 mr-1 bg-map4 text-white rounded"></span>支持多於反對0%~10%
+                <span class="px-2 mx-1 bg-map5 text-white rounded"></span>支持多於反對10%~20%
+                <span class="px-2 mx-1 bg-map6 text-white rounded"></span>支持多於反對20%以上
+              </small>
+
+              <div class="w-100 mt-2"><iframe src="https://plotdb.io/v/chart/19356" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
             </div>
-            <div class="project-step_desc mb-4" id="step2_redesign">
-            </div>
-            <div class="bg-primary w-100 mt-2"><iframe src="https://plotdb.io/v/chart/19356" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
           </div>
         </div>
       </div>
@@ -279,17 +216,11 @@
     </div>
 
 
-    <!-- step4 -->
-    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white ">
+    <!-- AREAS -->
+    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white">
       <div class="row">
-        <div class="col-lg-8 col-sm-6 px-3">
+        <div class="col-lg-8 col-sm-6">
           <h2 class="section-heading text-left py-3">地方支持率與人口特徵</h2>
-          <div class="project-category text-faded">
-            <p>副標題拉拉</p>
-          </div>
-          <div class="project-step_desc py-3">
-              卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我 
-          </div>
         </div>
       </div>
       <div class="row">
@@ -306,33 +237,34 @@
 
 
   <!-- concept -->
-  <section class="bg-white" id="concept">
+  <section class="bg-white" id="reason">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <h1 class="section-heading">其他資訊（尚未確定內容）</h1>
+          <h1 class="section-heading">公投提案理由</h1>
           <hr class="my-4">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-md-8 mx-auto">
-          <img class="img-fluid" src='https://picsum.photos/1800/1200/?random'>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-8 col-md-12 text-left mx-auto">
-          <div class="service-box mt-5 pt-5 mx-5 sr-button" style="margin-left: -15%;">
-            <h2>的味意有班手</h2>
+          <div class="service-box mt-5">
+            <h5>公投第<span id="i_prop_num">07</span>案</h5>
+            <h3 id="i_prop_name">
+                你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？
+            </h3>
             <br>
-            <p>卻機現產來眼物一者更！世色思卻時馬生化成龍同了首銷走北謝頭資提，不了地，個直決起景家事。又素小而，不我十後海題火開麼像去舞關面必業利不以爾，表一老導色評雄她……分供外科保後嗎立半內舉面我麼人件產也、臺為麼，得中個定想以在葉年解竟歡產成、各我。只天識旅之再，富中後今好成識地我說個的微快年出成去朋方？</p>
+            <h5>提案理由</h5>
             <br>
-            <h2>經表管的受時</h2>
-            <br>
-            <p>公平差不：上的排痛，將成物中西我長引色直神空。足日下的童教得活賽化感單來旅受客同令出什……家東女的……技氣坡。近紅然這這不小很管女電。與的室漸以定光經表管的受時，養水紅。在用劇大。金終行自，步經冷表我質的正我展的。導地十際自：年合果，整水。</p>
+            <p id="reasoning">
+                1. 國內歷年來已有許多實證研究證明，PM2.5確會造成國民呼吸道疾病，也是台灣慢性病危險因子的前四名，對老人及兒童之影響尤其明顯。
+                <br><br>
+                2. 蔡政府為實現2025年非核家園之政見，根據經濟部規劃的能源配比，2025年我國燃煤發電占比將達到30%、天然氣50%、再生能源20%。而在過渡期間則燃煤高達50%、天然氣30%、再生能源10%、核能10%之局面，可看出不管在任何階段，火力發電占比均達80%，實在是對台灣環境及國民健康不可承受之重。
+                <br><br>
+                3. 台灣約有8成電力來自於火力發電機組，燃煤及燃氣之43座發電機組中，有28座位於中南部，占65%，其中台中火力電廠更是全球第二大火力發電廠，對中南部居民造成更高的健康風險。            
+            </p>
 
-            <p>我學也：市養一現來曾巴動代文課音書覺；飯為底流數可？陽人百那字護，語此現夫上護活子。久得信歡太臺次面單程身終！總區提件日的布生病，治太我後自世修興，引個叫教眾保間工時母費當各！不園本升出社評語點實中，地論不我不那從岸之戰以及同子希府事示的心家超後理易作此獨……轉一座法人從再了一，什不院預的，觀都真戲我成力己也對業件方一的洋也華之學。</p>
-          </div>
+      </div>
         </div>
         
         </div>
@@ -350,11 +282,60 @@
           <hr class="my-4">
         </div>
       </div>
-    </div>
-    <div class="col-lg-6 mx-auto text-center">
-        
-        <a href="https://google.com">Github Repository</a>.
-    </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <h3 class="section-heading">資料來源</h3>
+
+          <ol start="1"><li>投票權人及開票資料（2018-11）：<a href="http://referendum.2018.nat.gov.tw/pc/zh_TW/IDX/indexFF.html">中選會</a>
+          </li><li>婚姻狀況、教育程度（2017）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=4E7FFDCC-17EC-4E5C-9DD7-780C2890AF6B">內政資料開放平臺</a>
+          </li><li>平均年齡、年齡中位數由各年齡層人數計算（2018-10）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=2C7688CB-B505-4D00-B11C-66C4D31B024F">內政資料開放平臺</a>
+          </li><li>基督教教會會友人數（2015）：<a href="http://www.ccea.org.tw/cceaup/church/christianityreport/2015.pdf">基督教資料中心</a>
+          </li><li>所得（2016）：<a href="https://ws.fia.gov.tw/001/upload/ias/isa105/105%E5%B9%B4%E5%BA%A6%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1%E5%88%9D%E6%AD%A5%E6%A0%B8%E5%AE%9A%E7%B5%B1%E8%A8%88%E5%B0%88%E5%86%8A.html">財政部財政資訊中心</a></li></ol>
+          
+          
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto border-top mt-5 pt-5">
+          <h3 class="section-heading">製作團隊</h3>
+          <div class="row">
+            <div class="col mx-auto">
+              <img src="img/profile-01.svg">
+              <h6 class="text-center">Linda Wu</h6>
+            </div>
+            <div class="col mx-auto">
+              <a href="http://ponan.li" target="blank"><img src="img/profile-02.svg">
+              <h6 class="text-center">Ponan Li</h6></a>
+            </div>
+            <div class="col mx-auto">
+              <a href="https://medium.com/@amossclaire" target="blank"><img src="img/profile-03.svg">
+              <h6 class="text-center">Claire Tsao</h6></a>
+            </div>
+            <div class="col mx-auto">
+                <a href="https://yentsenliu.com" target="blank"><img src="img/profile-04.svg">
+              <h6 class="text-center">Ansin Lau</h6></a>
+            </div>
+            <div class="col mx-auto">
+              <img src="img/profile-05.svg">
+              <h6 class="text-center">Lilly Wu</h6>
+            </div>
+            <div class="col mx-auto">
+              <img src="img/profile-06.svg">
+              <h6 class="text-center">Yu Lin</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto border-top mt-5 pt-5">
+          <h3 class="section-heading">原始碼</h3>
+          <a href="https://google.com">Github Repository</a>
+        </div>
+      </div>
+    </div>  
+  </div>
+
   </div>
   </section>
 
@@ -398,6 +379,11 @@
   <script src="js/json.js"></script>
   <script src="js/arcbar.js"></script>
 
+  <script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
     
 
 

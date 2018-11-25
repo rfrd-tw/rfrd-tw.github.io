@@ -57,6 +57,25 @@ h6 {
   background-color: $gray-100;
 }
 
+.bg-map1 {
+  background-color: $map-01;
+}
+.bg-map2 {
+  background-color: $map-02;
+}
+.bg-map3 {
+  background-color: $map-03;
+}
+.bg-map4 {
+  background-color: $map-04;
+}
+.bg-map5 {
+  background-color: $map-05;
+}
+.bg-map6 {
+  background-color: $map-06;
+}
+
 .text-faded {
   color: fade-out($white, .3);
 }

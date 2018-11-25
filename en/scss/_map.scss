@@ -21,7 +21,6 @@
       width: 100%;
       transform: translateY(-50%);
       text-align: center;
-      .project-category,
       .project-name {
         padding: 0 15px;
         @include sans-serif-font;
@@ -39,7 +38,7 @@
   @media (min-width: 768px) {
     .portfolio-box-caption {
       .portfolio-box-caption-content {
-        .project-category {
+        .small-title {
           font-size: 16px;
         }
         .project-name {
@@ -50,7 +49,7 @@
   }
 }
 
-.project-category {
+.small-title {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -66,28 +65,60 @@
   font-size: 14px;
 }
 
+
+#prop_num_width {
+  width: 120px;
+}
+
 #prop_num {
   font-size: 65px;
   @include sans-serif-font;
   position:relative;
-  top:0px;
-  padding-top: 60px;
-  height: 150px;
   font-weight: bold;
   text-align: center;
+  background-color: $brand-02;
+  padding-top: .5rem!important;
+  padding-bottom: .5rem!important;
 }
 
+
 #prop_num_bg {
-  background-image: url("../img/box_yellow.svg");
-  background-position: center 50%;
+  background-image: url("../img/box-top.svg");
+  background-position: center 100%;
   background-size: contain;
   overflow: visible;
   background-repeat:  no-repeat;
+  height:70px;
 }
 
+
 #prop_name{
-  padding-top: 70px;
+  padding-top: 90px;
+  text-align: center;
 }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #prop_name {
+    text-align: left !important;
+    padding-left: 1.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #prop_num_width {
+    width: 70px;
+  }
+  #prop_num {
+    font-size: 30px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  #prop_name {
+    padding-top: 70px !important;
+    text-align: left !important;
+  }
+}
+
 
 
 /*-arc-bar-*/

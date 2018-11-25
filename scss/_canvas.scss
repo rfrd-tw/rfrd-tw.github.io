@@ -8,21 +8,65 @@
   height:100%;
   background: $gray-100;
 }
-
-
-svg {
-  display: block;
-  margin: 0 auto;
+.righthand{
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.rotating-1{
+  padding-top:5%;
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  animation-duration: 6s;
+  animation: illust-1 ease-in-out 6s infinite;
+  transform: scale(0.7);
 }
 
-.motion-text{
-  font-size: 3pt;
-  fill: $brand-01;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+@-webkit-keyframes illust-1 {
+  50% {
+    -webkit-transform: rotate(25deg) scale(0.5);
+    transform: rotate(25deg) scale(0.75);
+  }
 }
 
-polygon {
-  stroke:  $brand-01;
+.rotating-2{
+  padding-top: 80%;
+  -webkit-animation-duration: 12s;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  animation-duration: 12s;
+  animation: illust-2 ease-in-out 12s infinite;
+  transform: scale(0.5);
+  opacity: 0.5;
 }
+
+@-webkit-keyframes illust-2 {
+  60% {
+    -webkit-transform: rotate(-25deg) scale(0.5);
+    transform: rotate(-25deg) scale(0.6);
+  }
+}
+
+
+.rotating-3{
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  animation-duration: 6s;
+  animation: illust-3 ease-in-out 6s infinite;
+  transform: scale(0.5);
+  opacity: 0.8;
+}
+
+@-webkit-keyframes illust-3 {
+  55% {
+    -webkit-transform: rotate(-45deg) scale(0.5);
+    transform: rotate(-45deg) scale(0.5);
+  }
+}
+
 

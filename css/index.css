@@ -8,11 +8,11 @@
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #ec54b2;
+  color: #fc00f6;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #ec54b2;
+  color: #fb00f6;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -68,7 +68,7 @@
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #ec54b2;
+    color: #fc00f6;
   }
 }
 
@@ -84,11 +84,10 @@
   text-decoration: none !important;
   color: white !important;
   font-weight: 700;
-  background: #ec54b2;
-  border: none;
+  background: #fc00f6;
 }
 #nav-rfrd .nav-rfrd-link:hover {
-  background: #b93687;
+  background: #cc3c95;
 }
 
 .nav-rfrd-fixed {
@@ -101,7 +100,7 @@
 }
 
 .text-primary {
-  color: #ec54b2 !important;
+  color: #fc00f6 !important;
 }
 
 .btn {
@@ -117,12 +116,12 @@
 }
 
 .btn-primary {
-  background-color: #ec54b2;
-  border-color: #ec54b2;
+  background-color: #fc00f6;
+  border-color: #fc00f6;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #b93687 !important;
+  background-color: #e300dd !important;
 }
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
@@ -144,7 +143,7 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #ec54b2;
+  border-color: #fc00f6;
 }
 
 hr.light {
@@ -152,13 +151,13 @@ hr.light {
 }
 
 a {
-  color: #ec54b2;
+  color: #fc00f6;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 a:hover {
-  color: #ec54b2;
+  color: #fb00f6;
 }
 
 p {
@@ -176,7 +175,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #ec54b2 !important;
+  background-color: #fc00f6 !important;
 }
 
 .bg-dark {
@@ -191,28 +190,28 @@ h6 {
   background-color: #f8f9fa;
 }
 
-.bg-s1 {
-  background-color: #788600;
-}
-
-.bg-s2 {
+.bg-map1 {
   background-color: #e7f94d;
 }
 
-.bg-s3 {
-  background-color: #f7fdc5;
+.bg-map2 {
+  background-color: #f6ffaa;
 }
 
-.bg-s4 {
-  background-color: #fdbbe9;
+.bg-map3 {
+  background-color: #fbffde;
 }
 
-.bg-s5 {
-  background-color: #f51fb3;
+.bg-map4 {
+  background-color: #ffdff5;
 }
 
-.bg-s6 {
-  background-color: #890057;
+.bg-map5 {
+  background-color: #fb99d6;
+}
+
+.bg-map6 {
+  background-color: #ec54b2;
 }
 
 .text-faded {
@@ -330,22 +329,64 @@ header.masthead #nav-rfrd a {
   background: #f8f9fa;
 }
 
-svg {
-  display: block;
-  margin: 0 auto;
+.righthand {
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
-.motion-text {
-  font-size: 3pt;
-  fill: #ec54b2;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+.rotating-1 {
+  padding-top: 5%;
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  animation-duration: 6s;
+  animation: illust-1 ease-in-out 6s infinite;
+  transform: scale(0.7);
 }
 
-polygon {
-  stroke: #ec54b2;
+@-webkit-keyframes illust-1 {
+  50% {
+    -webkit-transform: rotate(25deg) scale(0.5);
+    transform: rotate(25deg) scale(0.75);
+  }
+}
+.rotating-2 {
+  padding-top: 80%;
+  -webkit-animation-duration: 12s;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  animation-duration: 12s;
+  animation: illust-2 ease-in-out 12s infinite;
+  transform: scale(0.5);
+  opacity: 0.5;
 }
 
+@-webkit-keyframes illust-2 {
+  60% {
+    -webkit-transform: rotate(-25deg) scale(0.5);
+    transform: rotate(-25deg) scale(0.6);
+  }
+}
+.rotating-3 {
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  animation-duration: 6s;
+  animation: illust-3 ease-in-out 6s infinite;
+  transform: scale(0.5);
+  opacity: 0.8;
+}
+
+@-webkit-keyframes illust-3 {
+  55% {
+    -webkit-transform: rotate(-45deg) scale(0.5);
+    transform: rotate(-45deg) scale(0.5);
+  }
+}
 .portfolio-box {
   position: relative;
   display: block;
@@ -361,7 +402,7 @@ polygon {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(236, 84, 178, 0.9);
+  background: rgba(252, 0, 246, 0.9);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -505,7 +546,6 @@ polygon {
 .scatter-plot {
   width: 20em;
   height: 20em;
-  margin: 0.3em 0.3em 0.4em 1em;
 }
 
 .tooltip-scp {

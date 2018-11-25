@@ -1,10 +1,9 @@
 // Global styling for this template 
 html, body {
-
   height: 100% !important;
-  width: 100%;}
-
-
+  width: 100%;
+  
+}
 
 body {
   @include serif-font;
@@ -26,6 +25,10 @@ a {
   &:hover {
     color: darken($brand-01, .1);
   }
+}
+
+p {
+  line-height: 1.7rem;
 }
 
 h1,
@@ -50,6 +53,29 @@ h6 {
   background-color: $white !important;
 }
 
+.bg-light {
+  background-color: $gray-100;
+}
+
+.bg-map1 {
+  background-color: $map-01;
+}
+.bg-map2 {
+  background-color: $map-02;
+}
+.bg-map3 {
+  background-color: $map-03;
+}
+.bg-map4 {
+  background-color: $map-04;
+}
+.bg-map5 {
+  background-color: $map-05;
+}
+.bg-map6 {
+  background-color: $map-06;
+}
+
 .text-faded {
   color: fade-out($white, .3);
 }
@@ -66,6 +92,7 @@ section {
 
 .section-heading {
   margin-top: 0;
+  line-height: 4rem !important;
 }
 
 ::-moz-selection {

@@ -1,15 +1,15 @@
 .scatter {
-	display: block;
-	float:left;
-	margin: 0.2em 0.2em 0.4em 1em; 
-	width: 20em;
-	height: 20em;
-	border-left: 0.1em solid #D3D3D3;
-	float: left;
-	padding: 2em 2em 4em 2em;
+  display: block;
+  float:left;
+  width: 20em;
+  height: 22em;
 }
 .scatter:nth-child(2n+1) {
     clear: left;
+}
+.scatter-plot {
+  width: 20em;
+  height: 20em;
 }
 .tooltip-scp {
 	width: 3em;
@@ -18,4 +18,7 @@
     text-align: center;
     font: 12px sans-serif;
     position: absolute;
+}
+.scatter text {
+	fill:"#fff";
 }
