@@ -1,5 +1,7 @@
 var vote_num = 7;
-
+function chooseScatter(x) {
+	vote_num = x;
+}
 d3.csv("data/data_en.csv").then(function(data) {
 
 	const draw_scp = (vote, ...ind_vars) => {

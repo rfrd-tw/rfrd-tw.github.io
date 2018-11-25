@@ -1,4 +1,7 @@
 var vote_num = 7;
+function chooseScatter(x) {
+	vote_num = x;
+}
 
 d3.csv("data/data_zh.csv").then(function(data) {
 
