@@ -55,6 +55,7 @@ var pie = d3.pie() // start and end angles of the segments
   .value(function(d) { return d.count; }) // how to extract the numerical data from each entry in our dataset
   .sort(null); // by default, data sorts in oescending value. this will mess with our animation so we set it to null
 
+var formatComma = d3.format(",");
 // define pie_tooltip
 var pie_tooltip = d3.select('#chart') // select element in the DOM with id 'chart'
   .append('div') // append a div element to the element we've selected                                    
@@ -104,7 +105,7 @@ path.on('mouseover', function(d) {  // when mouse enters div
 
  var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
  pie_tooltip.select('.label').html(d.data.label); // set current label           
- pie_tooltip.select('.count').html(d.data.count+'票'); // set current count            
+ pie_tooltip.select('.count').html(formatComma(d.data.count)+'票'); // set current count            
  pie_tooltip.select('.percent').html(percent + '%'); // set percent calculated above          
  pie_tooltip.style('display', 'block'); // set display                     
 });                                                           
