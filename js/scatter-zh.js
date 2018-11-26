@@ -173,7 +173,6 @@ d3.csv("data/data_zh.csv").then(function(data) {
 
 		chooseScatter = function chooseScatter(num) {
 			
-			console.log(num);
 			vote_num = num;
 			vote = "vote"+vote_num;
 
