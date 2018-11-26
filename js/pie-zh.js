@@ -1,13 +1,8 @@
-var pieDataRaw;
-var pieData = {};
-var vote_num = 7;
+d3.csv("/data/pie.csv").then(function(data){
 
-d3.csv("/data/pie.csv", function(data){
- pieDataRaw = data;
-});
+  var pieData = {};
 
-setTimeout(function(){
-  pieDataRaw.forEach( function(d){
+  data.forEach(function(d){
     var vote = "vote"+d.case;
     pieData[vote] = [];
     var n = 0;
@@ -121,4 +116,5 @@ path.on('mousemove', function(d) { // when mouse moves
     .style('left', (d3.event.layerX + 10) + 'px'); // always 10px to the right of the mouse
   });
 
-},200);
+
+}) // end of d3.csv
