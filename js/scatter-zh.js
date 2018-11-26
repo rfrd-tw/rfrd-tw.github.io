@@ -130,7 +130,6 @@ d3.csv("data/data_zh.csv").then(function(data) {
 
 		function mouseover(d) {
 
-			console.log(d);
 			d3.selectAll("#"+d.site_id)
 			.attr("r", 6)
 			.attr("fill", "#f9fe6c")
