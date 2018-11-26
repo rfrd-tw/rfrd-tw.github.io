@@ -104,7 +104,7 @@
 }
 
 .btn {
-  font-weight: 700;
+  font-weight: 300;
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
@@ -174,6 +174,11 @@ h6 {
   line-height: 2.3rem;
 }
 
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 1.7rem;
+  }
+}
 .bg-primary {
   background-color: #fc00f6 !important;
 }
@@ -343,7 +348,7 @@ header.masthead #nav-rfrd a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f8f9fa;
+  background: linear-gradient(#f8f9fa, #fff);
 }
 
 .righthand {
@@ -584,19 +589,19 @@ rect.disabled {
 .scatter {
   display: block;
   float: left;
-  width: 20em;
-  height: 22em;
-  margin: 1em 4em 2em 0;
+  width: 16.5em;
+  height: 20em;
+  margin: 1em 1.5em 2em 0;
 }
 
-.scatter:nth-child(2n+1) {
+.scatter:nth-child(5n+1) {
   clear: left;
 }
 
 .scatter-plot {
-  width: 20em;
-  height: 20em;
-  margin: 1em 1em 2em 1em;
+  width: 16.5em;
+  height: 16.5em;
+  margin: 1em 0em 2em 1em;
 }
 
 .tooltip-scp {

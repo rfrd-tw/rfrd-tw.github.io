@@ -58,16 +58,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div id="nav-ul-hide">
       <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
-          <li class="nav-item" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
-          <li class="nav-item" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
-          <li class="nav-item" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
-          <li class="nav-item" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
-          <li class="nav-item" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
-          <li class="nav-item" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
-          <li class="nav-item" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
-          <li class="nav-item" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
-          <li class="nav-item" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
       </ul>  
       </div>
       <ul class="navbar-nav ml-auto">
@@ -189,7 +189,7 @@
               <div class="small-title text-faded">
                 <p>台灣鄉鎮層級公投同意率分佈</p>
               </div>
-              <small class="text-faded text">同意率(%)=同意票數/總有效票數</small><br>
+              <small class="text-faded text">台灣全圖所顯示之顏色為各縣市的鄉鎮平均同意率。若欲了解鄉鎮層級的同意率，請點擊縣市放大查看。<br>同意率(%)=同意票數/總有效票數</small><br>
               <small>
                 <span class="px-2 mr-1 bg-map1 text-white rounded"></span>＜20%
                 <span class="px-2 ml-2 mr-1 bg-map2 text-white rounded"></span>21-30%
@@ -211,13 +211,15 @@
 
 
     <!-- AREAS -->
-    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white">
+    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white border-top">
       <div class="row">
         <div class="col-lg-8 col-sm-6">
-          <h2 class="section-heading text-left py-3">地方支持率與人口特徵</h2>
+          <h2 class="section-heading text-left py-3">地方同意率與人口特徵</h2>
+          <p class="text-faded">＊下列散佈圖中的每一點為一鄉鎮。橫軸為該公投同意率，縱軸為鄉鎮人口特徵。移動游標可得知各點為何鄉鎮。</p>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmeRPxKoc9SDM_EuHjODj2uFwSljx8UNmmMo17EuIgmjkk8w/viewform?usp=sf_link" target="blank"><button type="button" class="btn btn-primary">建議我們新的變項</button></a></p>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <div class="col">
           <div id="scatter-block">
             <div id="scp0" class="scatter">
@@ -253,11 +255,11 @@
             <h5>提案理由</h5>
             <br>
             <p id="reasoning">
-                1. 國內歷年來已有許多實證研究證明，PM2.5確會造成國民呼吸道疾病，也是台灣慢性病危險因子的前四名，對老人及兒童之影響尤其明顯。
+                1. 國內歷年來已有許多實證研究證明，PM2.5確實會造成國民呼吸道疾病，也是台灣慢性病危險因子的前四名，對老人及兒童之影響尤其明顯。
                 <br><br>
                 2. 蔡政府為實現2025年非核家園之政見，根據經濟部規劃的能源配比，2025年我國燃煤發電占比將達到30%、天然氣50%、再生能源20%。而在過渡期間則燃煤高達50%、天然氣30%、再生能源10%、核能10%之局面，可看出不管在任何階段，火力發電占比均達80%，實在是對台灣環境及國民健康不可承受之重。
                 <br><br>
-                3. 台灣約有8成電力來自於火力發電機組，燃煤及燃氣之43座發電機組中，有28座位於中南部，占65%，其中台中火力電廠更是全球第二大火力發電廠，對中南部居民造成更高的健康風險。            
+                3. 台灣約有8成電力來自於火力發電機組，燃煤及燃氣之43座發電機組中，有28座位於中南部，占65%，其中台中火力電廠更是全球第二大火力發電廠，對中南部居民造成更高的健康風險。      
             </p>
 
       </div>
@@ -278,14 +280,13 @@
           <hr class="my-4">
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-lg-8 col-md-12 mx-auto">
           <h3 class="section-heading">資料來源</h3>
 
-          <ol start="1"><li>投票權人及開票資料（2018-11）：<a href="http://referendum.2018.nat.gov.tw/pc/zh_TW/IDX/indexFF.html">中選會</a>
+          <ol start="1"><li>開票資料（2018-Nov）：<a href="http://referendum.2018.nat.gov.tw/pc/zh_TW/IDX/indexFF.html">中選會</a>
           </li><li>婚姻狀況、教育程度（2017）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=4E7FFDCC-17EC-4E5C-9DD7-780C2890AF6B">內政資料開放平臺</a>
-          </li><li>平均年齡、年齡中位數由各年齡層人數計算（2018-10）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=2C7688CB-B505-4D00-B11C-66C4D31B024F">內政資料開放平臺</a>
-          </li><li>基督教教會會友人數（2015）：<a href="http://www.ccea.org.tw/cceaup/church/christianityreport/2015.pdf">基督教資料中心</a>
+          </li><li>各年齡層人數計算（2018-Oct）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=2C7688CB-B505-4D00-B11C-66C4D31B024F">內政資料開放平臺</a>
           </li><li>所得（2016）：<a href="https://ws.fia.gov.tw/001/upload/ias/isa105/105%E5%B9%B4%E5%BA%A6%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1%E5%88%9D%E6%AD%A5%E6%A0%B8%E5%AE%9A%E7%B5%B1%E8%A8%88%E5%B0%88%E5%86%8A.html">財政部財政資訊中心</a></li></ol>
           
           
@@ -324,13 +325,21 @@
           </div>
         </div>
       </div>
+      
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto pb-5 border-bottom">
+            <h3 class="section-heading">聯絡我們</h3>
+            <p>我們想搜集這次資料視覺化的相關回饋，請幫我們填寫問卷！</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmeRPxKoc9SDM_EuHjODj2uFwSljx8UNmmMo17EuIgmjkk8w/viewform?usp=sf_link" target="blank"><button type="button" class="btn btn-primary">我要填問卷</button></a>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-2 col-md-12"></div>
-        <div class="col-lg-4 col-md-12 border-top mt-5 pt-5">
+        <div class="col-lg-4 col-md-12mt-5 pt-5">
           <h3 class="section-heading">原始碼</h3>
           <a href="https://github.com/rfrd-tw/rfrd-tw.github.io">Github Repository</a>
         </div>
-        <div class="col-lg-4 col-md-12 mx-auto border-top mt-5 pt-5">
+        <div class="col-lg-4 col-md-12 mx-auto pt-5">
           <h3 class="section-heading">特別致謝</h3>
           <a href="https://plotdb.com">PlotDB</a>
         </div>

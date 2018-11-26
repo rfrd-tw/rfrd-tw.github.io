@@ -1,17 +1,17 @@
 .scatter {
   display: block;
   float:left;
-  width: 20em;
-  height: 22em;
-  margin:1em 4em 2em 0;
+  width: 16.5em;
+  height: 20em;
+  margin:1em 1.5em 2em 0;
 }
-.scatter:nth-child(2n+1) {
+.scatter:nth-child(5n+1) {
     clear: left;
 }
 .scatter-plot {
-  width: 20em;
-  height: 20em;
-  margin: 1em 1em 2em 1em;
+  width: 16.5em;
+  height: 16.5em;
+  margin: 1em 0em 2em 1em;
 }
 
 .tooltip-scp {

@@ -21,7 +21,7 @@
       document.getElementById("mainNav").style.opacity = "1";
       document.getElementById("nav-ul-hide").style.display = "block";
     } else if ($("#mainNav").offset().top > 800) {
-      document.getElementById("mainNav").style.opacity = ".4";
+      document.getElementById("mainNav").style.opacity = "0.1";
     } else if ($("#mainNav").offset().top < 600) {
       document.getElementById("nav-ul-hide").style.display = "none";
     } else if ($("#mainNav").offset().top > 550) {

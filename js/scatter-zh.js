@@ -30,7 +30,7 @@ d3.csv("data/data_zh.csv").then(function(data) {
 
 		z = d3.scaleThreshold()
 		.domain(0.5)
-		.range(["#e83e8c", "#9a55fc"]);
+		.range(["#fc00f6", "#fc00f6"]);
 
 		var yAxisSet1, yAxisSet2;
 
@@ -206,7 +206,7 @@ d3.csv("data/data_zh.csv").then(function(data) {
 				.attr("class", ind_var)
 				.attr("cx", d => x(d[vote]))
 				.attr("cy", d => y(d[ind_var]))
-				.attr("fill", "#e83e8c")
+				.attr("fill", "#fc00f6")
 				.attr("r", 0)
 				.attr("id", d => d.site_id)
 				.on("mouseover", mouseover)
