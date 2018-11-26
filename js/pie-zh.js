@@ -1,3 +1,4 @@
+var choosePie;
 d3.csv("/data/pie.csv").then(function(data){
 
   var pieData = {};
@@ -99,7 +100,8 @@ var path = svg.selectAll('path') // select all path elements inside the svg. spe
 path.on('mouseover', function(d) {  // when mouse enters div      
  var total = d3.sum(dataset.map(function(d) { // calculate the total number of tickets in the dataset         
   return (d.enabled) ? d.count : 0; // checking to see if the entry is enabled. if it isn't, we return 0 and cause other percentages to increase                                      
-}));                                                      
+}));                                     
+
  var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
  pie_tooltip.select('.label').html(d.data.label); // set current label           
  pie_tooltip.select('.count').html(d.data.count+'票'); // set current count            
@@ -115,6 +117,27 @@ path.on('mousemove', function(d) { // when mouse moves
   pie_tooltip.style('top', (d3.event.layerY + 10) + 'px') // always 10px below the cursor
     .style('left', (d3.event.layerX + 10) + 'px'); // always 10px to the right of the mouse
   });
+
+choosePie = function choosePie(vote_num) {
+  dataset = pieData["vote"+vote_num];
+  dataset.forEach(function(d) {
+  d.count = +d.count; // calculate count as we iterate through the data
+  d.enabled = true; // add enabled property to track which entries are checked
+});
+  path = path.data(pie(dataset)); // compute the new angles
+  path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+}
+
+// Store the displayed angles in _current.
+// Then, interpolate from _current to the new angles.
+// During the transition, _current is updated in-place by d3.interpolate.
+function arcTween(a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+    return arc(i(t));
+  };
+}
 
 
 }) // end of d3.csv
