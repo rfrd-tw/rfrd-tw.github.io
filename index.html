@@ -33,8 +33,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 700" rel="stylesheet">
 
 
-
-
   <!-- Bootstrap datepicker JS and CSS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"></link>
@@ -46,7 +44,6 @@
   <!-- D3JS -->
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-  
 
 </head>
 
@@ -61,16 +58,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div id="nav-ul-hide">
       <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item" onclick="prop_func(0);chooseScatter(7);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
-          <li class="nav-item" onclick="prop_func(1);chooseScatter(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
-          <li class="nav-item" onclick="prop_func(2);chooseScatter(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
-          <li class="nav-item" onclick="prop_func(3);chooseScatter(10);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
-          <li class="nav-item" onclick="prop_func(4);chooseScatter(11);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
-          <li class="nav-item" onclick="prop_func(5);chooseScatter(12);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
-          <li class="nav-item" onclick="prop_func(6);chooseScatter(13);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
-          <li class="nav-item" onclick="prop_func(7);chooseScatter(14);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
-          <li class="nav-item" onclick="prop_func(8);chooseScatter(15);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
-          <li class="nav-item" onclick="prop_func(9);chooseScatter(16);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
+          <li class="nav-item" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
+          <li class="nav-item" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
+          <li class="nav-item" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
+          <li class="nav-item" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
+          <li class="nav-item" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
+          <li class="nav-item" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
+          <li class="nav-item" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
+          <li class="nav-item" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
+          <li class="nav-item" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
+          <li class="nav-item" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
       </ul>  
       </div>
       <ul class="navbar-nav ml-auto">
@@ -92,19 +89,19 @@
         </div>
         <div class="col-lg-8 mx-auto">
           <p class="mb-5 text-masthead">
-            2018年11月24日，一場伴隨地方選舉的公投結束了。<br>我們希望可以幫助您了解公投結果。</p>
+              2018年11月24日與台灣各縣市地方選舉一同舉行的十項公投案的結果出爐了。<br>我們希望可以幫助您了解公投結果。</p>
         </div>
         <div class="col-lg-8 mx-auto text-white" id="nav-rfrd">
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);chooseScatter(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反空污公投">07</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);chooseScatter(8);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反燃煤電廠">08</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);chooseScatter(9);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反日本核食">09</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);chooseScatter(10);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="民法限異性婚">10</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);chooseScatter(11);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反性平教育">11</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);chooseScatter(12);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚立專法">12</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);chooseScatter(13);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="東奧正名">13</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);chooseScatter(14);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚修民法">14</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);chooseScatter(15);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="性平教育">15</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);chooseScatter(16);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="以核養綠">16</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反空污公投">07</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反燃煤電廠">08</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反日本核食">09</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="民法限異性婚">10</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反性平教育">11</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚立專法">12</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="東奧正名">13</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚修民法">14</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="性平教育">15</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="以核養綠">16</a>
         </div>
       </div>
     </div>
@@ -161,25 +158,26 @@
                     你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？
                 </h4> 
               </div>
-              <div class="project-step_desc border-bottom pb-4" id="step2_current">
+              <div class="project-step_desc border-bottom pb-5" id="step2_current">
                   <!-- 提案理由 -->
                   <a href="#reason"><button type="button" class="btn btn-primary">提案理由</button></a>
-        
               </div>
               <div class="row  d-flex align-items-center pt-4">
-                <div class="col-7 voteCount"><small class="text-faded text">同意票對投票權人數百分比</small><h2>26%</h2></div>
-                <div class="col votCOunt"><small class="text-faded text">公投結果</small><h2>通過</h2></div>
+                <div class="col-7 voteCount"><small class="text-faded text">同意票對投票權人數百分比</small><h2 id="pie_ratio">40.27%</h2></div>
+                <div class="col votCOunt"><small class="text-faded text">公投結果</small><h2 id="pie_result">通過</h2></div>
               </div>
-              <div class="row d-flex align-items-center w-100">
-                 <!-- <div class="arc-bar">
-                    <div class="full-arc overlay">
-                      <div class="cover-1">
-                        <div class="cover-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="state"></h2>
-                  <input type="range" min="0" max="100" class="slider">-->
+              <div class="row  d-flex align-items-center pt-4">
+                  <div class="col">
+                    <small>
+                      <span class="px-2 mr-1 bg-map7 text-white rounded"></span>同意票
+                      <span class="px-2 ml-2 mr-1 bg-map4 text-white rounded"></span>反對票
+                      <span class="px-2 ml-2 mr-1 bg-map-invalid text-white rounded"></span>廢票
+                      <span class="px-2 ml-2 mr-1 bg-map-no text-white rounded"></span>未投票
+                    </small>
+                  </div>  
+                </div>
+              <div class="row mt-4">
+                <div class="col" id="chart"></div>
               </div>
             </div>
           </div>
@@ -189,16 +187,18 @@
           <div class="row my-4">
             <div class="col">
               <div class="small-title text-faded">
-                <p>台灣支持率分佈</p>
+                <p>台灣鄉鎮層級公投同意率分佈</p>
               </div>
-              <small class="text-faded text">同意票數減不同意票數/總有效票數* 100%</small><br>
+              <small class="text-faded text">同意率(%)=同意票數/總有效票數</small><br>
               <small>
-                <span class="px-2 mr-1 bg-map1 text-white rounded"></span>反對多於支持20%以上
-                <span class="px-2 mx-1 bg-map2 text-white rounded"></span>反對多於支持10~20%
-                <span class="px-2 mx-1 bg-map3 text-white rounded"></span>反對多於支持0~10%<br>
-                <span class="px-2 mr-1 bg-map4 text-white rounded"></span>支持多於反對0%~10%
-                <span class="px-2 mx-1 bg-map5 text-white rounded"></span>支持多於反對10%~20%
-                <span class="px-2 mx-1 bg-map6 text-white rounded"></span>支持多於反對20%以上
+                <span class="px-2 mr-1 bg-map1 text-white rounded"></span>＜20%
+                <span class="px-2 ml-2 mr-1 bg-map2 text-white rounded"></span>21-30%
+                <span class="px-2 ml-2 mr-1 bg-map3 text-white rounded"></span>31-40%
+                <span class="px-2 ml-2 mr-1 bg-map4 text-white rounded"></span>41-50%
+                <span class="px-2 ml-2 mr-1 bg-map5 text-white rounded"></span>51-60%
+                <span class="px-2 ml-2 mr-1 bg-map6 text-white rounded"></span>61-70%
+                <span class="px-2 ml-2 mr-1 bg-map7 text-white rounded"></span>71-80%
+                <span class="px-2 ml-2 mr-1 bg-map8 text-white rounded"></span>＞80%
               </small>
 
               <div class="w-100 mt-2"><iframe id="mapIframe" src="https://plotdb.io/v/chart/19480" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
@@ -371,7 +371,8 @@
   <script src="js/creative.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/json.js"></script>
-  <script src="js/arcbar.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+  <script src="js/pie-zh.js"></script>
 
   <script>
   $(function () {

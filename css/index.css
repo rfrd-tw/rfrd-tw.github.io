@@ -191,27 +191,43 @@ h6 {
 }
 
 .bg-map1 {
-  background-color: #e7f94d;
+  background-color: #ffffff;
 }
 
 .bg-map2 {
-  background-color: #f6ffaa;
+  background-color: #f9f8de;
 }
 
 .bg-map3 {
-  background-color: #fbffde;
+  background-color: #ffff99;
 }
 
 .bg-map4 {
-  background-color: #ffdff5;
+  background-color: #e7f94d;
 }
 
 .bg-map5 {
-  background-color: #fb99d6;
+  background-color: #efc2f2;
 }
 
 .bg-map6 {
-  background-color: #ec54b2;
+  background-color: #ff80e7;
+}
+
+.bg-map7 {
+  background-color: #f51fb3;
+}
+
+.bg-map8 {
+  background-color: #4c003e;
+}
+
+.bg-map-invalid {
+  background-color: #423c3e;
+}
+
+.bg-map-no {
+  background-color: #f2f5f4;
 }
 
 .text-faded {
@@ -221,6 +237,7 @@ h6 {
 .text-masthead {
   font-family: "Raleway", sans-serif !important;
   font-weight: 700 !important;
+  line-height: 2.4rem;
 }
 
 section {
@@ -532,6 +549,38 @@ header.masthead #nav-rfrd a {
   text-align: center;
 }
 
+/* tooltip */
+.pie_tooltip {
+  background: #222;
+  box-shadow: 0 0 5px #000;
+  color: #fff;
+  display: none;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 150px;
+  z-index: 10;
+}
+.pie_tooltip .label {
+  font-weight: 700;
+}
+
+/* legend */
+.pie_legend {
+  font-size: 14px;
+}
+
+rect {
+  cursor: pointer;
+  stroke-width: 2;
+}
+
+rect.disabled {
+  fill: transparent !important;
+}
+
 .scatter {
   display: block;
   float: left;
@@ -558,7 +607,7 @@ header.masthead #nav-rfrd a {
 }
 
 .scatter text {
-  fill: "#fff" !important;
+  fill: "#fff";
 }
 
 /*# sourceMappingURL=index.css.map */
