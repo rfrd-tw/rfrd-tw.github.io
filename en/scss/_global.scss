@@ -41,6 +41,12 @@ h6 {
   line-height: 2.3rem;
 }
 
+@media (max-width: 575.98px){
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
 .bg-primary {
   background-color: $brand-01 !important;
 }
@@ -75,7 +81,18 @@ h6 {
 .bg-map6 {
   background-color: $map-06;
 }
-
+.bg-map7 {
+  background-color: $map-07;
+}
+.bg-map8 {
+  background-color: $map-08;
+}
+.bg-map-invalid {
+  background-color: $map-invalid;
+}
+.bg-map-no {
+  background-color: $map-no;
+}
 .text-faded {
   color: fade-out($white, .3);
 }
@@ -83,6 +100,7 @@ h6 {
 .text-masthead{
   font-family: 'Raleway', sans-serif !important;
   font-weight: 700 !important;
+  line-height: 2.4rem;
 }
 
 

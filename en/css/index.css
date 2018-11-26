@@ -8,11 +8,11 @@
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #9a55fc;
+  color: #fc00f6;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #9a54fc;
+  color: #fb00f6;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -68,7 +68,7 @@
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #9a55fc;
+    color: #fc00f6;
   }
 }
 
@@ -84,10 +84,10 @@
   text-decoration: none !important;
   color: white !important;
   font-weight: 700;
-  background: #9a55fc;
+  background: #fc00f6;
 }
 #nav-rfrd .nav-rfrd-link:hover {
-  background: #7c38da;
+  background: #cc3c95;
 }
 
 .nav-rfrd-fixed {
@@ -100,11 +100,11 @@
 }
 
 .text-primary {
-  color: #9a55fc !important;
+  color: #fc00f6 !important;
 }
 
 .btn {
-  font-weight: 700;
+  font-weight: 300;
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
@@ -116,12 +116,12 @@
 }
 
 .btn-primary {
-  background-color: #9a55fc;
-  border-color: #9a55fc;
+  background-color: #fc00f6;
+  border-color: #fc00f6;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #8b3cfc !important;
+  background-color: #e300dd !important;
 }
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
@@ -143,7 +143,7 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #9a55fc;
+  border-color: #fc00f6;
 }
 
 hr.light {
@@ -151,13 +151,17 @@ hr.light {
 }
 
 a {
-  color: #9a55fc;
+  color: #fc00f6;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 a:hover {
-  color: #9a54fc;
+  color: #fb00f6;
+}
+
+p {
+  line-height: 1.7rem;
 }
 
 h1,
@@ -170,8 +174,13 @@ h6 {
   line-height: 2.3rem;
 }
 
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 1.7rem;
+  }
+}
 .bg-primary {
-  background-color: #9a55fc !important;
+  background-color: #fc00f6 !important;
 }
 
 .bg-dark {
@@ -182,6 +191,50 @@ h6 {
   background-color: #fff !important;
 }
 
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-map1 {
+  background-color: #ffffff;
+}
+
+.bg-map2 {
+  background-color: #f9f8de;
+}
+
+.bg-map3 {
+  background-color: #ffff99;
+}
+
+.bg-map4 {
+  background-color: #e7f94d;
+}
+
+.bg-map5 {
+  background-color: #efc2f2;
+}
+
+.bg-map6 {
+  background-color: #ff80e7;
+}
+
+.bg-map7 {
+  background-color: #f51fb3;
+}
+
+.bg-map8 {
+  background-color: #4c003e;
+}
+
+.bg-map-invalid {
+  background-color: #f2f5f4;
+}
+
+.bg-map-no {
+  background-color: #423c3e;
+}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -189,6 +242,7 @@ h6 {
 .text-masthead {
   font-family: "Raleway", sans-serif !important;
   font-weight: 700 !important;
+  line-height: 2.4rem;
 }
 
 section {
@@ -197,6 +251,7 @@ section {
 
 .section-heading {
   margin-top: 0;
+  line-height: 4rem !important;
 }
 
 ::-moz-selection {
@@ -293,14 +348,67 @@ header.masthead #nav-rfrd a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f8f9fa;
+  background: linear-gradient(#f8f9fa, #fff);
 }
 
-svg {
-  display: block;
-  margin: 0 auto;
+.righthand {
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
+.rotating-1 {
+  padding-top: 5%;
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  animation-duration: 6s;
+  animation: illust-1 ease-in-out 6s infinite;
+  transform: scale(0.7);
+}
+
+@-webkit-keyframes illust-1 {
+  50% {
+    -webkit-transform: rotate(25deg) scale(0.5);
+    transform: rotate(25deg) scale(0.75);
+  }
+}
+.rotating-2 {
+  padding-top: 80%;
+  -webkit-animation-duration: 12s;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  animation-duration: 12s;
+  animation: illust-2 ease-in-out 12s infinite;
+  transform: scale(0.5);
+  opacity: 0.5;
+}
+
+@-webkit-keyframes illust-2 {
+  60% {
+    -webkit-transform: rotate(-25deg) scale(0.5);
+    transform: rotate(-25deg) scale(0.6);
+  }
+}
+.rotating-3 {
+  -webkit-animation-duration: 6s;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  animation-duration: 6s;
+  animation: illust-3 ease-in-out 6s infinite;
+  transform: scale(0.5);
+  opacity: 0.8;
+}
+
+@-webkit-keyframes illust-3 {
+  55% {
+    -webkit-transform: rotate(-45deg) scale(0.5);
+    transform: rotate(-45deg) scale(0.5);
+  }
+}
 .portfolio-box {
   position: relative;
   display: block;
@@ -316,7 +424,7 @@ svg {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(154, 85, 252, 0.9);
+  background: rgba(252, 0, 246, 0.9);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -328,7 +436,6 @@ svg {
   transform: translateY(-50%);
   text-align: center;
 }
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -340,7 +447,7 @@ svg {
   outline: none;
 }
 @media (min-width: 768px) {
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .small-title {
     font-size: 16px;
   }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
@@ -348,7 +455,7 @@ svg {
   }
 }
 
-.project-category {
+.small-title {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -367,29 +474,57 @@ svg {
   font-size: 14px;
 }
 
+#prop_num_width {
+  width: 120px;
+}
+
 #prop_num {
   font-size: 65px;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   position: relative;
-  top: 0px;
-  padding-top: 60px;
-  height: 150px;
   font-weight: bold;
   text-align: center;
+  background-color: #e6f84d;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 #prop_num_bg {
-  background-image: url("../img/box_yellow.svg");
-  background-position: center 50%;
+  background-image: url("../img/box-top.svg");
+  background-position: center 100%;
   background-size: contain;
   overflow: visible;
   background-repeat: no-repeat;
+  height: 70px;
 }
 
 #prop_name {
-  padding-top: 70px;
+  padding-top: 90px;
+  text-align: center;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #prop_name {
+    text-align: left !important;
+    padding-left: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  #prop_num_width {
+    width: 70px;
+  }
+
+  #prop_num {
+    font-size: 30px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #prop_name {
+    padding-top: 70px !important;
+    text-align: left !important;
+  }
+}
 /*-arc-bar-*/
 .arc-bar {
   width: 100px;
@@ -419,28 +554,68 @@ svg {
   text-align: center;
 }
 
+/* tooltip */
+.pie_tooltip {
+  background: #222;
+  box-shadow: 0 0 5px #000;
+  color: #fff;
+  display: none;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 150px;
+  z-index: 10;
+}
+.pie_tooltip .label {
+  font-weight: 700;
+}
+
+/* legend */
+.pie_legend {
+  font-size: 14px;
+}
+
+rect {
+  cursor: pointer;
+  stroke-width: 2;
+}
+
+rect.disabled {
+  fill: transparent !important;
+}
+
 .scatter {
   display: block;
   float: left;
-  margin: 0.2em 0.2em 0.4em 1em;
-  width: 20em;
+  width: 18.5em;
   height: 20em;
-  border-left: 0.1em solid #D3D3D3;
-  float: left;
-  padding: 2em 2em 4em 2em;
+  margin: 1em 3em 3em 0;
 }
 
 .scatter:nth-child(2n+1) {
   clear: left;
 }
 
+.scatter-plot {
+  width: 18.5em;
+  height: 18.5em;
+  margin: 1em 0.5em 2em 1em;
+}
+
 .tooltip-scp {
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 4em;
+  padding: 0.5em;
   background-color: #D3D3D3;
   text-align: center;
   font: 12px sans-serif;
   position: absolute;
+}
+
+.scatter text {
+  fill: "#fff";
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -9,7 +9,7 @@ margin = {
 	"left": parseInt($('.scatter-plot').css('margin-left').replace(/px/g, ""))
 };
 
-d3.csv("data/data_zh.csv").then(function(data) {
+d3.csv("data/data_en.csv").then(function(data) {
 
 	draw_scp = function draw_scp(vote, ...ind_vars) {
 

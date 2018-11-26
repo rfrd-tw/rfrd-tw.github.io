@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Taiwan Referendum 2018</title>
-  <meta property="og:title"
-  content="Taiwan Referendum 2018">
-  <meta property="og:description"
-  content="Data visualization of the results of Taiwan Referendum 2018" />
-  <meta property="og:image" content="" />
+  <title>Taiwanese referendum, 2018</title>
+  <meta property="og:title" content="Taiwanese referendum, 2018">
+  <meta property="og:description" content="Ten referenda were held in Taiwan on 24 November 2018 alongside the midterm local elections. We hope to help you understand what the results are." />
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:url"    content="https://rfrd-tw.github.io/#viz" /> 
+  <meta property="og:image" content="https://rfrd-tw.github.io/img/op_img_zh.png" />
   <!-- ICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -28,25 +28,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- Custom fonts -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 700" rel="stylesheet">
-
-
 
 
   <!-- Bootstrap datepicker JS and CSS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"></link>
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="css/index.css">
 
   <!-- Plugin CSS -->
-  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- D3JS -->
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-  
 
 </head>
 
@@ -54,27 +51,27 @@
 
 <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">台灣公民投票 2018</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Taiwanese referendum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div id="nav-ul-hide">
       <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item" onclick="prop_func(0);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反空汙公投">07</a></li>
-          <li class="nav-item" onclick="prop_func(1);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反燃煤電廠">08</a></li>
-          <li class="nav-item" onclick="prop_func(2);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反日本核食">09</a></li>
-          <li class="nav-item" onclick="prop_func(3);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="民法限異性婚">10</a></li>
-          <li class="nav-item" onclick="prop_func(4);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="反性平教育">11</a></li>
-          <li class="nav-item" onclick="prop_func(5);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚立專法">12</a></li>
-          <li class="nav-item" onclick="prop_func(6);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="東奧正名">13</a></li>
-          <li class="nav-item" onclick="prop_func(7);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="同婚修民法">14</a></li>
-          <li class="nav-item" onclick="prop_func(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="性平教育">15</a></li>
-          <li class="nav-item" onclick="prop_func(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="以核養綠">16</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;"><a class="nav-link active" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Against air pollution">07</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Against coal-fired power plants">08</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Ban on food imports from the Fukushima-nuclear-crisis-affected areas">09</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Restrict marriage to be formed by a man and a woman in the Civil Code">10</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Against LGBT gender equity education">11</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Same-sex marriage to be regulated under a separate law that is not the Civil Code">12</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title='Use the name "Taiwan" to participate in 2020 Tokyo Olympics'>13</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="Same-sex marriage to be regulated under the Civil Code">14</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="For LGBT gender equity education">15</a></li>
+          <li class="nav-item js-scroll-trigger" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;"><a class="nav-link" href="#viz"  data-toggle="tooltip" data-placement="bottom" title="For nuclear power">16</a></li>
       </ul>  
       </div>
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="./en/index.html">EN</a></li>
+          <li class="nav-item active"><a class="nav-link" href="../index.html">ZH-TW</a></li>
       </ul>  
     </div>
   </nav>
@@ -86,26 +83,27 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1>
-            <strong>台灣公民投票 2018</strong>
+            <strong>Taiwanese referendum, 2018</strong>
           </h1>
           <hr>
         </div>
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-8 mx-auto mb-3">
           <p class="mb-5 text-masthead">
-            2018年11月24日，一場伴隨地方選舉的公投結束了。<br>我們希望可以幫助您了解公投結果。</p>
+            Ten referenda were held in Taiwan on 24 November 2018 alongside the midterm local elections.<br> We hope to help you understand what the results are.
+          </p>
+          <small class="text-primary">Case navigation</small>
         </div>
         <div class="col-lg-8 mx-auto text-white" id="nav-rfrd">
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反空污公投">07</button>
-            </a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反燃煤電廠">08</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反日本核食">09</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="民法限異性婚">10</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反性平教育">11</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚立專法">12</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="東奧正名">13</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="同婚修民法">14</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="性平教育">15</a>
-            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="以核養綠">16</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Against air pollution">07</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(1);chooseScatter(8);choosePie(8);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Against coal-fired power plants">08</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(2);chooseScatter(9);choosePie(9);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Ban on food imports from the Fukushima-nuclear-crisis-affected areas">09</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(3);chooseScatter(10);choosePie(10);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Restrict marriage to be formed by a man and a woman in the Civil Code">10</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(4);chooseScatter(11);choosePie(11);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Against LGBT gender equity education">11</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(5);chooseScatter(12);choosePie(12);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Same-sex marriage to be regulated under a separate law that is not the Civil Code">12</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(6);chooseScatter(13);choosePie(13);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title='Use the name "Taiwan" to participate in 2020 Tokyo Olympics'>13</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(7);chooseScatter(14);choosePie(14);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="Same-sex marriage to be regulated under the Civil Code">14</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(8);chooseScatter(15);choosePie(15);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="For LGBT gender equity education">15</a>
+            <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(9);chooseScatter(16);choosePie(16);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="For nuclear power">16</a>
         </div>
       </div>
     </div>
@@ -144,7 +142,7 @@
               </div>
             </div>
             <div class="col">
-              <h2 class="section-heading text-white" id="prop_name">反空污公投</h2>
+              <h2 class="section-heading text-white" id="prop_name"></h2>
             </div>
           </div>
         </div>
@@ -155,37 +153,33 @@
           <div class="row my-4">
             <div class="col">
               <div class="small-title text-faded">
-                <p>公投主文</p>
+                <p>Proposal</p>
               </div>
               <div class="question py-3:">
                 <h4 class="pb-3" id="full_case">
-                    你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？
+                  Do you agree that the electricity output of thermal power plants should be lowered by "at least 1 percent per year on average"?
                 </h4> 
               </div>
-              <div class="project-step_desc border-bottom pb-4" id="step2_current">
+              <div class="project-step_desc border-bottom pb-5" id="step2_current">
                   <!-- 提案理由 -->
-                  <a href="#reason"><button type="button" class="btn btn-primary">提案理由</button></a>
-        
+                  <a href="#reason"><button type="button" class="btn btn-light">Reasoning</button></a>
               </div>
               <div class="row  d-flex align-items-center pt-4">
-                <div class="col voteCount"><small class="text-faded text">同意票數</small><h2>1,426,523</h2></div>
-                <div class="col votCOunt"><small class="text-faded text">不同意票數</small><h2>723,241</h2></div>
+                <div class="col-7 voteCount"><small class="text-faded text">Yes votes over total eligible voters</small><h2 id="pie_ratio">40.27%</h2></div>
+                <div class="col votCOunt"><small class="text-faded text">Result</small><h2 id="pie_result">Approved</h2></div>
               </div>
-              <div class="row  d-flex align-items-center">
-                  <div class="col voteCount"><small class="text-faded text">投票權人數</small><h4>19,826,523</h4></div>
-                  <div class="col voteCount"><small class="text-faded text">同意票對投票權人數百分比</small><h2>23%</h2></div>
-
+              <div class="row  d-flex align-items-center pt-4">
+                  <div class="col">
+                    <small>
+                      <span class="px-2 mr-1 bg-map7 text-white rounded"></span>Yes
+                      <span class="px-2 ml-2 mr-1 bg-map4 text-white rounded"></span>No
+                      <span class="px-2 ml-2 mr-1 bg-map-invalid text-white rounded"></span>Invalid vote
+                      <span class="px-2 ml-2 mr-1 bg-map-no text-white rounded"></span>Did not vote
+                    </small>
+                  </div>  
                 </div>
-              <div class="row d-flex align-items-center w-100">
-                 <!-- <div class="arc-bar">
-                    <div class="full-arc overlay">
-                      <div class="cover-1">
-                        <div class="cover-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <h2 class="state"></h2>
-                  <input type="range" min="0" max="100" class="slider">-->
+              <div class="row mt-4">
+                <div class="col" id="chart"></div>
               </div>
             </div>
           </div>
@@ -195,19 +189,21 @@
           <div class="row my-4">
             <div class="col">
               <div class="small-title text-faded">
-                <p>台灣支持率分佈</p>
+                <p>Percentage of yes votes by township in Taiwan</p>
               </div>
-              <small class="text-faded text">同意票數減不同意票數/總有效票數* 100%</small><br>
+              <small class="text-faded text">*The colors shown in the map of Taiwan below are the percentages of yes votes of the cities/counties. For township-level figures, please click on the cities/counties to zoom in.<br>Percentage of yes votes is defined as "yes votes/valid votes"</small><br>
               <small>
-                <span class="px-2 mr-1 bg-map1 text-white rounded"></span>反對多於支持20%以上
-                <span class="px-2 mx-1 bg-map2 text-white rounded"></span>反對多於支持10~20%
-                <span class="px-2 mx-1 bg-map3 text-white rounded"></span>反對多於支持0~10%<br>
-                <span class="px-2 mr-1 bg-map4 text-white rounded"></span>支持多於反對0%~10%
-                <span class="px-2 mx-1 bg-map5 text-white rounded"></span>支持多於反對10%~20%
-                <span class="px-2 mx-1 bg-map6 text-white rounded"></span>支持多於反對20%以上
+                <span class="px-2 mr-1 bg-map1 text-white rounded"></span>＜20%
+                <span class="px-2 ml-2 mr-1 bg-map2 text-white rounded"></span>21-30%
+                <span class="px-2 ml-2 mr-1 bg-map3 text-white rounded"></span>31-40%
+                <span class="px-2 ml-2 mr-1 bg-map4 text-white rounded"></span>41-50%
+                <span class="px-2 ml-2 mr-1 bg-map5 text-white rounded"></span>51-60%
+                <span class="px-2 ml-2 mr-1 bg-map6 text-white rounded"></span>61-70%
+                <span class="px-2 ml-2 mr-1 bg-map7 text-white rounded"></span>71-80%
+                <span class="px-2 ml-2 mr-1 bg-map8 text-white rounded"></span>＞80%
               </small>
 
-              <div class="w-100 mt-2"><iframe src="https://plotdb.io/v/chart/19356" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
+              <div class="w-100 mt-2"><iframe id="mapIframe" src="https://plotdb.io/v/chart/19480" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe></div>
             </div>
           </div>
         </div>
@@ -217,17 +213,21 @@
 
 
     <!-- AREAS -->
-    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white">
+    <div class="col-lg-10 col-sm-12 mx-auto pt-5 mb-5 text-white border-top">
       <div class="row">
         <div class="col-lg-8 col-sm-6">
-          <h2 class="section-heading text-left py-3">地方支持率與人口特徵</h2>
+          <h2 class="section-heading text-left py-3">Percentage of yes votes by township and demographics </h2>
+          <p class="text-faded">＊Each dot in the scatter plots below represents a township. The x-axis is the percentage of yes votes of that township and the y-axis is its demographics. Move the cursor to see what township the dot represnets.</p>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmeRPxKoc9SDM_EuHjODj2uFwSljx8UNmmMo17EuIgmjkk8w/viewform?usp=sf_link" target="blank"><button type="button" class="btn btn-primary">Suggest new variable</button></a></p>
         </div>
       </div>
-      <div class="row">
-        <div id="scatter-block">
-          <div id="scp0" class="scatter">
-            <div id="scp0-title" class="scatter-title"></div>
-            <div id="scp0-plot" class="scatter-plot"></div>
+      <div class="row mt-3">
+        <div class="col">
+          <div id="scatter-block">
+            <div id="scp0" class="scatter">
+              <div id="scp0-title" class="scatter-title"></div>
+              <div id="scp0-plot" class="scatter-plot"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -241,7 +241,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <h1 class="section-heading">公投提案理由</h1>
+          <h1 class="section-heading">Reasoning of Referendum</h1>
           <hr class="my-4">
         </div>
       </div>
@@ -249,20 +249,23 @@
       <div class="row">
         <div class="col-lg-8 col-md-12 text-left mx-auto">
           <div class="service-box mt-5">
-            <h5>公投第<span id="i_prop_num">07</span>案</h5>
+            <h5>Referendum No.<span id="i_prop_num">07</span></h5>
             <h3 id="i_prop_name">
-                你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量？
+              Do you agree that the electricity output of thermal power plants should be lowered by "at least 1 percent per year on average"?
             </h3>
             <br>
-            <h5>提案理由</h5>
+            <h5>Reasoning</h5>
             <br>
             <p id="reasoning">
-                1. 國內歷年來已有許多實證研究證明，PM2.5確會造成國民呼吸道疾病，也是台灣慢性病危險因子的前四名，對老人及兒童之影響尤其明顯。
-                <br><br>
-                2. 蔡政府為實現2025年非核家園之政見，根據經濟部規劃的能源配比，2025年我國燃煤發電占比將達到30%、天然氣50%、再生能源20%。而在過渡期間則燃煤高達50%、天然氣30%、再生能源10%、核能10%之局面，可看出不管在任何階段，火力發電占比均達80%，實在是對台灣環境及國民健康不可承受之重。
-                <br><br>
-                3. 台灣約有8成電力來自於火力發電機組，燃煤及燃氣之43座發電機組中，有28座位於中南部，占65%，其中台中火力電廠更是全球第二大火力發電廠，對中南部居民造成更高的健康風險。            
+              The current coal-fired electricity output in Taiwan has already met the government’s target in the “2025 Nuclear-free Homeland” plan.<br>
+              The Shen’ao Power Plant expansion project is therefore unnecessary and should be abandoned.<br>      
             </p>
+            <h5>Further Reading</h5>
+            <br>
+            <ul id="reading_1">
+              <li><a href="https://en.rti.org.tw/news/view/id/2000164" target="blank">Taiwan voters pass three energy-related referenda</a></li>
+              <li><a href="https://newbloommag.net/2018/11/25/progressive-referendum-results/" target="blank">Progressive Taiwanese Civil Society Sees Defeat by Way of National Referendum</a></li>
+            </ul> 
 
       </div>
         </div>
@@ -282,15 +285,14 @@
           <hr class="my-4">
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-lg-8 col-md-12 mx-auto">
-          <h3 class="section-heading">資料來源</h3>
+          <h3 class="section-heading">Data source</h3>
 
-          <ol start="1"><li>投票權人及開票資料（2018-11）：<a href="http://referendum.2018.nat.gov.tw/pc/zh_TW/IDX/indexFF.html">中選會</a>
-          </li><li>婚姻狀況、教育程度（2017）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=4E7FFDCC-17EC-4E5C-9DD7-780C2890AF6B">內政資料開放平臺</a>
-          </li><li>平均年齡、年齡中位數由各年齡層人數計算（2018-10）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=2C7688CB-B505-4D00-B11C-66C4D31B024F">內政資料開放平臺</a>
-          </li><li>基督教教會會友人數（2015）：<a href="http://www.ccea.org.tw/cceaup/church/christianityreport/2015.pdf">基督教資料中心</a>
-          </li><li>所得（2016）：<a href="https://ws.fia.gov.tw/001/upload/ias/isa105/105%E5%B9%B4%E5%BA%A6%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1%E5%88%9D%E6%AD%A5%E6%A0%B8%E5%AE%9A%E7%B5%B1%E8%A8%88%E5%B0%88%E5%86%8A.html">財政部財政資訊中心</a></li></ol>
+          <ol start="1"><li>Referendum results（2018-Nov）：<a href="http://referendum.2018.nat.gov.tw/pc/zh_TW/IDX/indexFF.html"> Central Election Commission in Taiwan</a>
+          </li><li>Marital status and education（2017）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=4E7FFDCC-17EC-4E5C-9DD7-780C2890AF6B">Ministry of the Interior in Taiwan Open Data </a>
+          </li><li>Age distribution（2018-Oct）：<a href="https://data.moi.gov.tw/MoiOD/Data/DataDetail.aspx?oid=2C7688CB-B505-4D00-B11C-66C4D31B024F">Ministry of the Interior in Taiwan Open Data</a>
+          </li><li>Income（2016）：<a href="https://ws.fia.gov.tw/001/upload/ias/isa105/105%E5%B9%B4%E5%BA%A6%E7%B6%9C%E5%90%88%E6%89%80%E5%BE%97%E7%A8%85%E7%94%B3%E5%A0%B1%E5%88%9D%E6%AD%A5%E6%A0%B8%E5%AE%9A%E7%B5%B1%E8%A8%88%E5%B0%88%E5%86%8A.html">Ministry of Finance in Taiwan</a></li></ol>
           
           
         </div>
@@ -298,7 +300,7 @@
     
       <div class="row">
         <div class="col-lg-8 col-md-12 mx-auto border-top mt-5 pt-5">
-          <h3 class="section-heading">製作團隊</h3>
+          <h3 class="section-heading">Our Team</h3>
           <div class="row">
             <div class="col mx-auto">
               <img src="img/profile-01.svg">
@@ -312,6 +314,7 @@
               <a href="https://medium.com/@amossclaire" target="blank"><img src="img/profile-03.svg">
               <h6 class="text-center">Claire Tsao</h6></a>
             </div>
+            <div class="w-100 d-none d-sm-block d-md-none"></div>
             <div class="col mx-auto">
                 <a href="https://yentsenliu.com" target="blank"><img src="img/profile-04.svg">
               <h6 class="text-center">Ansin Lau</h6></a>
@@ -327,11 +330,25 @@
           </div>
         </div>
       </div>
+      
       <div class="row">
-        <div class="col-lg-8 col-md-12 mx-auto border-top mt-5 pt-5">
-          <h3 class="section-heading">原始碼</h3>
-          <a href="https://google.com">Github Repository</a>
+        <div class="col-lg-8 col-md-12 mx-auto pb-5 border-bottom">
+            <h3 class="section-heading">Contact us</h3>
+            <p>We’d like to know what you think about this website. Please fill out the questionnaire below to help us improve!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmeRPxKoc9SDM_EuHjODj2uFwSljx8UNmmMo17EuIgmjkk8w/viewform?usp=sf_link" target="blank"><button type="button" class="btn btn-primary">Take the survey</button></a>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-12"></div>
+        <div class="col-lg-4 col-md-12mt-5 pt-5">
+          <h3 class="section-heading">Source codes</h3>
+          <a href="https://github.com/rfrd-tw/rfrd-tw.github.io">Github Repository</a>
+        </div>
+        <div class="col-lg-4 col-md-12 mx-auto pt-5">
+          <h3 class="section-heading">Special thanks</h3>
+          <a href="https://plotdb.com">PlotDB</a>
+        </div>
+        <div class="col-lg-2 col-md-12"></div>
       </div>
     </div>  
   </div>
@@ -365,19 +382,20 @@
   <script src="js/scatter-en.js"></script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Javascripts for UI -->
   <script src="js/creative.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/json.js"></script>
-  <script src="js/arcbar.js"></script>
+  <script src="js/pie-zh.js"></script>
+  
 
   <script>
   $(function () {

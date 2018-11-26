@@ -152,3 +152,39 @@
   width: 300px;
   text-align: center;
 }
+
+
+// PIE
+
+/* tooltip */
+.pie_tooltip {
+  background: #222;
+  box-shadow: 0 0 5px #000;
+  color: #fff;
+  display: none;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 150px;
+  z-index: 10;
+  .label{
+    font-weight: 700;
+  }
+}
+
+
+/* legend */
+.pie_legend {
+  font-size: 14px;
+}
+rect {
+  cursor: pointer; 
+  stroke-width: 2;
+}
+rect.disabled {
+  fill: transparent !important;
+}
+
+
