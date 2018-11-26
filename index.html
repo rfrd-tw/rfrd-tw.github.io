@@ -10,7 +10,7 @@
   content="台灣公民投票 2018">
   <meta property="og:description"
   content="台灣公民投票資訊視覺化" />
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="img/op_image_zh.png" />
   <!-- ICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -89,7 +89,7 @@
         </div>
         <div class="col-lg-8 mx-auto">
           <p class="mb-5 text-masthead">
-              2018年11月24日與台灣各縣市地方選舉一同舉行的十項公投案的結果出爐了。<br>我們希望可以幫助您了解公投結果。</p>
+              2018年11月24日，與台灣各縣市地方選舉一同舉行的十項公投結果出爐。<br>我們希望可以幫助您了解公投結果。</p>
         </div>
         <div class="col-lg-8 mx-auto text-white" id="nav-rfrd">
             <a class="nav-rfrd-link sr-button p-3 mx-1 my-2 rounded-circle" onclick="prop_func(0);chooseScatter(7);choosePie(7);return false;" href="#viz"  data-toggle="tooltip" data-placement="top" title="反空污公投">07</a>
@@ -218,10 +218,12 @@
         </div>
       </div>
       <div class="row">
-        <div id="scatter-block">
-          <div id="scp0" class="scatter">
-            <div id="scp0-title" class="scatter-title"></div>
-            <div id="scp0-plot" class="scatter-plot"></div>
+        <div class="col">
+          <div id="scatter-block">
+            <div id="scp0" class="scatter">
+              <div id="scp0-title" class="scatter-title"></div>
+              <div id="scp0-plot" class="scatter-plot"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -306,6 +308,7 @@
               <a href="https://medium.com/@amossclaire" target="blank"><img src="img/profile-03.svg">
               <h6 class="text-center">Claire Tsao</h6></a>
             </div>
+            <div class="w-100 d-none d-sm-block d-md-none"></div>
             <div class="col mx-auto">
                 <a href="https://yentsenliu.com" target="blank"><img src="img/profile-04.svg">
               <h6 class="text-center">Ansin Lau</h6></a>
@@ -322,10 +325,16 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 col-md-12 mx-auto border-top mt-5 pt-5">
+        <div class="col-lg-2 col-md-12"></div>
+        <div class="col-lg-4 col-md-12 border-top mt-5 pt-5">
           <h3 class="section-heading">原始碼</h3>
-          <a href="https://google.com">Github Repository</a>
+          <a href="https://github.com/rfrd-tw/rfrd-tw.github.io">Github Repository</a>
         </div>
+        <div class="col-lg-4 col-md-12 mx-auto border-top mt-5 pt-5">
+          <h3 class="section-heading">特別致謝</h3>
+          <a href="https://plotdb.com">PlotDB</a>
+        </div>
+        <div class="col-lg-2 col-md-12"></div>
       </div>
     </div>  
   </div>
@@ -371,8 +380,8 @@
   <script src="js/creative.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/json.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
   <script src="js/pie-zh.js"></script>
+  
 
   <script>
   $(function () {

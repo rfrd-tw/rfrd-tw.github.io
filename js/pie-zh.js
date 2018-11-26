@@ -1,10 +1,30 @@
+var pieDataRaw;
+var pieData = {};
+var vote_num = 7;
+
+d3.csv("/data/pie.csv", function(data){
+ pieDataRaw = data;
+});
+
+setTimeout(function(){
+  pieDataRaw.forEach( function(d){
+    var vote = "vote"+d.case;
+    pieData[vote] = [];
+    var n = 0;
+    for (var property in d) {
+      if (property !== "case" && n < 4) {
+        var tmp={
+          label: property,
+          count: parseInt(d[property].replace(/,/g, ""))
+        };
+        pieData[vote].push(tmp);
+        n++;
+      } 
+    }
+  });
+
 // define data
-var dataset = [
-    {label: "未投票", count: 8977017},
-    {label: "廢票", count: 715140},
-    {label: "同意票", count: 7955753},
-    {label: "反對票", count: 2109157},
-  ];
+var dataset = pieData.vote7
 
 // chart dimensions
 var width = parseInt($('#chart').width());
@@ -31,7 +51,7 @@ var svg = d3.select('#chart') // select element in the DOM with id 'chart'
   .append('g') // append 'g' element to the svg element
   .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
 
-var arc = d3.arc()
+  var arc = d3.arc()
   .innerRadius(40) // none for pie chart
   .outerRadius(radius); // size of overall chart
 
@@ -84,7 +104,7 @@ var path = svg.selectAll('path') // select all path elements inside the svg. spe
 path.on('mouseover', function(d) {  // when mouse enters div      
  var total = d3.sum(dataset.map(function(d) { // calculate the total number of tickets in the dataset         
   return (d.enabled) ? d.count : 0; // checking to see if the entry is enabled. if it isn't, we return 0 and cause other percentages to increase                                      
-  }));                                                      
+}));                                                      
  var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
  pie_tooltip.select('.label').html(d.data.label); // set current label           
  pie_tooltip.select('.count').html(d.data.count+'票'); // set current count            
@@ -94,9 +114,11 @@ path.on('mouseover', function(d) {  // when mouse enters div
 
 path.on('mouseout', function() { // when mouse leaves div                        
   pie_tooltip.style('display', 'none'); // hide pie_tooltip for that element
- });
+});
 
 path.on('mousemove', function(d) { // when mouse moves                  
-  pie_tooltip.style('top', 150 + 'px') // always 10px below the cursor
-    .style('left', 150  + 'px'); // always 10px to the right of the mouse
+  pie_tooltip.style('top', (d3.event.layerY + 10) + 'px') // always 10px below the cursor
+    .style('left', (d3.event.layerX + 10) + 'px'); // always 10px to the right of the mouse
   });
+
+},200);

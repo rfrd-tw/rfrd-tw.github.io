@@ -223,11 +223,11 @@ h6 {
 }
 
 .bg-map-invalid {
-  background-color: #423c3e;
+  background-color: #f2f5f4;
 }
 
 .bg-map-no {
-  background-color: #f2f5f4;
+  background-color: #423c3e;
 }
 
 .text-faded {
@@ -287,11 +287,6 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
   color: black !important;
-}
-
-.btn-outline {
-  background: transparent !important;
-  border: 2px #fc00f6 solid;
 }
 
 header.masthead {
@@ -591,6 +586,7 @@ rect.disabled {
   float: left;
   width: 20em;
   height: 22em;
+  margin: 1em 4em 2em 0;
 }
 
 .scatter:nth-child(2n+1) {
@@ -600,6 +596,7 @@ rect.disabled {
 .scatter-plot {
   width: 20em;
   height: 20em;
+  margin: 1em 1em 2em 1em;
 }
 
 .tooltip-scp {

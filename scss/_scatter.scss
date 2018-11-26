@@ -3,6 +3,7 @@
   float:left;
   width: 20em;
   height: 22em;
+  margin:1em 4em 2em 0;
 }
 .scatter:nth-child(2n+1) {
     clear: left;
@@ -10,7 +11,9 @@
 .scatter-plot {
   width: 20em;
   height: 20em;
+  margin: 1em 1em 2em 1em;
 }
+
 .tooltip-scp {
 	width: 3em;
 	height: 3em;
