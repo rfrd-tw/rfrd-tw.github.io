@@ -97,6 +97,6 @@ path.on('mouseout', function() { // when mouse leaves div
  });
 
 path.on('mousemove', function(d) { // when mouse moves                  
-  pie_tooltip.style('top', (d3.event.layerY + 10) + 'px') // always 10px below the cursor
-    .style('left', (d3.event.layerX + 10) + 'px'); // always 10px to the right of the mouse
+  pie_tooltip.style('top', 150 + 'px') // always 10px below the cursor
+    .style('left', 150  + 'px'); // always 10px to the right of the mouse
   });
