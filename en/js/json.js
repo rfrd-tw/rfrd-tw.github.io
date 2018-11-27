@@ -88,21 +88,30 @@ function prop_func(x) {
 
     
   function makeUL(data) {
+
+    var prevList = document.getElementById('readingList');
+    if (prevList) {
+    prevList.remove(); // Removes the div with the 'readings' id
+  }
+
     // Create the list element:
     var list = document.createElement('ul');
+    list.setAttribute('id', 'readingList');
 
     data["vote"+x].forEach(function(d) {
+
     // Create the list item:
     var item = document.createElement('li');
 
     // Set its contents:
 
     var tmp = document.createElement('a');
-    var tmpText = document.createTextNode(data.title);
-    tmp.setAttribute('href', data.url);
+    var tmpText = document.createTextNode(d.title);
+    tmp.setAttribute('href', d.url);
     tmp.appendChild(tmpText);
     item.appendChild(tmp);
     list.appendChild(item);
+    console.log(tmpText, tmp, item, list)
     })
 
     // Finally, return the constructed list:
@@ -112,7 +121,7 @@ function prop_func(x) {
   let returnList = makeUL(proposal);
 
   // Add the List to #reading:
-  document.getElementById('reading').innerHTML = returnList;
+  document.getElementById('reading').appendChild(returnList);
 
 
 
