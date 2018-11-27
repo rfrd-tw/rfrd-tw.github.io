@@ -30,7 +30,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 
 		z = d3.scaleThreshold()
 		.domain(0.5)
-		.range(["#e83e8c", "#9a55fc"]);
+		.range(["#fc00f6", "#fc00f6"]);
 
 		var yAxisSet1, yAxisSet2;
 
@@ -55,12 +55,13 @@ d3.csv("data/data_en.csv").then(function(data) {
 				scpDiv = scatterDiv
 				.append("div")
 				.attr("id", "scp"+i+"-plot")
-				.attr("class", "scatter");
+				.attr("class", "scatter-plot");
 			}
 
 			const svg = scpDiv.append("svg")
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
+			.attr("transform", "translate(" + (-margin.left) + "," + margin.top + ")")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 			.attr("class", "plot-g");
@@ -173,7 +174,6 @@ d3.csv("data/data_en.csv").then(function(data) {
 
 		chooseScatter = function chooseScatter(num) {
 			
-			console.log(num);
 			vote_num = num;
 			vote = "vote"+vote_num;
 
@@ -227,5 +227,5 @@ d3.csv("data/data_en.csv").then(function(data) {
 		//return svg.node();
 	}
 
-	draw_scp("vote"+vote_num, "College (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
+	draw_scp("vote"+vote_num, "College Degree (%)", "Ever Married (%)", "Median Age", "Median Income (10k NTD)"); 
 });
