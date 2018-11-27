@@ -113,7 +113,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 			.attr("cy", d => y(d[ind_var]))
 			.attr("fill", d => z(d[vote]))
 			.attr("r", 2.5)
-			.attr("id", d => d.site_id)
+			.attr("id", d => d.site_id.replace(/, /g, "").replace(/ /g, ""))
 			.on("mouseover", mouseover)
 			.on("click", click)
 			.on("mouseout", mouseout);
@@ -130,7 +130,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 		};
 
 		function mouseover(d) {
-			d3.selectAll("#"+d.site_id)
+			d3.selectAll("#"+d.site_id.replace(/\, /g, "").replace(/ /g, ""))
 			.attr("r", 6)
 			.attr("fill", "#f9fe6c")
 			.moveToFront();
@@ -147,7 +147,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 		}
 
 		function click(d) {
-			d3.selectAll("#"+d.site_id)
+			d3.selectAll("#"+d.site_id.replace(/\, /g, "").replace(/ /g, ""))
 			.attr("r", 6)
 			.attr("fill", "#f9fe6c");
 
@@ -163,7 +163,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 		}
 
 		function mouseout(d) {
-			d3.selectAll("#"+d.site_id)
+			d3.selectAll("#"+d.site_id.replace(/\, /g, "").replace(/ /g, ""))
 			.attr("r", 2.5)
 			.attr("fill", d => z(d[vote]));
 
