@@ -33,6 +33,12 @@ function prop_func(x) {
   document.getElementById("i_prop_name").innerHTML = full_case;
   let reasoning = prop_obj.prop[x].Reasoning;
   document.getElementById("reasoning").innerHTML = reasoning;
+  let src_map = prop_obj.prop[x].src_map;
+  document.getElementById('mapIframe').src = src_map;
+  let ratio = prop_obj.prop[x].ratio;
+  document.getElementById("pie_ratio").innerHTML = ratio;
+  let result = prop_obj.prop[x].result;
+  document.getElementById("pie_result").innerHTML = result;
 
   document.querySelector('#viz').scrollIntoView({ 
     behavior: 'smooth' 

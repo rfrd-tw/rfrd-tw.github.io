@@ -206,7 +206,7 @@ d3.csv("data/data_en.csv").then(function(data) {
 				.attr("class", ind_var)
 				.attr("cx", d => x(d[vote]))
 				.attr("cy", d => y(d[ind_var]))
-				.attr("fill", "#e83e8c")
+				.attr("fill", "#fc00f6")
 				.attr("r", 0)
 				.attr("id", d => d.site_id)
 				.on("mouseover", mouseover)
