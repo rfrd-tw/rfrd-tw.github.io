@@ -13,7 +13,7 @@
   
   const prop_obj = JSON.parse(prop);
 
-function prop_func(x) {
+  function prop_func(x) {
   // Add active class to the current button (highlight it)
   const prop_btn = document.getElementById("nav-rfrd");
   const prop_lis = prop_btn.getElementsByClassName("nav-rfrd-link");
@@ -45,48 +45,48 @@ function prop_func(x) {
 
   const proposal = {
     vote0: [
-      {'title': 'Taiwan voters pass three energy-related referenda', 'url':'https://en.rti.org.tw/news/view/id/2000164'}
+    {'title': 'Taiwan voters pass three energy-related referenda', 'url':'https://en.rti.org.tw/news/view/id/2000164'}
     ],
     vote1: [
-      {'title': 'KMT unveils Shenao Power Plant referendum drive', 'url':'http://www.taipeitimes.com/News/taiwan/archives/2018/04/14/2003691292'},
-      {'title': 'Taiwan Takes a Step Back With New Coal Plant', 'url':'https://thediplomat.com/2018/05/taiwan-takes-a-step-back-with-new-coal-plant/'}
+    {'title': 'KMT unveils Shenao Power Plant referendum drive', 'url':'http://www.taipeitimes.com/News/taiwan/archives/2018/04/14/2003691292'},
+    {'title': 'Taiwan Takes a Step Back With New Coal Plant', 'url':'https://thediplomat.com/2018/05/taiwan-takes-a-step-back-with-new-coal-plant/'}
     ],
     vote2: [
-      {'title': 'Taiwan to vote on whether to maintain ban of some Japanese food products in referendum next month', 'url':'https://www.japantimes.co.jp/news/2018/10/09/national/taiwan-vote-whether-maintain-ban-japanese-food-products-referendum-next-month/#.W_sGBC2ZM1I'},
-      {'title': 'Taiwan votes to maintain ban on food from Fukushima disaster areas', 'url':'https://asia.nikkei.com/Politics/International-Relations/Taiwan-votes-to-maintain-ban-on-food-from-Fukushima-disaster-areas/'}
+    {'title': 'Taiwan to vote on whether to maintain ban of some Japanese food products in referendum next month', 'url':'https://www.japantimes.co.jp/news/2018/10/09/national/taiwan-vote-whether-maintain-ban-japanese-food-products-referendum-next-month/#.W_sGBC2ZM1I'},
+    {'title': 'Taiwan votes to maintain ban on food from Fukushima disaster areas', 'url':'https://asia.nikkei.com/Politics/International-Relations/Taiwan-votes-to-maintain-ban-on-food-from-Fukushima-disaster-areas/'}
     ],
     vote3: [
-      {'title': 'Taiwan was supposed to be the first place in Asia to legalize gay marriage. Then things got complicated.', 'url':'https://www.washingtonpost.com/world/2018/11/23/taiwan-was-supposed-be-first-asian-country-legalize-gay-marriage-then-things-got-complicated/?utm_term=.61f6a2376a27'},
-      {'title': 'Taiwan voters reject same-sex marriage', 'url':'https://www.cnn.com/2018/11/25/asia/taiwan-same-sex-marriage-referendum/index.html'}
+    {'title': 'Taiwan was supposed to be the first place in Asia to legalize gay marriage. Then things got complicated.', 'url':'https://www.washingtonpost.com/world/2018/11/23/taiwan-was-supposed-be-first-asian-country-legalize-gay-marriage-then-things-got-complicated/?utm_term=.61f6a2376a27'},
+    {'title': 'Taiwan voters reject same-sex marriage', 'url':'https://www.cnn.com/2018/11/25/asia/taiwan-same-sex-marriage-referendum/index.html'}
     ],
     vote4: [
-      {'title': 'Uncertainty grips gay people in Taiwan as same-sex marriage goes to the vote', 'url':'https://www.theguardian.com/global-development/2018/nov/24/taiwan-same-sex-marriage-vote-referendum'},
+    {'title': 'Uncertainty grips gay people in Taiwan as same-sex marriage goes to the vote', 'url':'https://www.theguardian.com/global-development/2018/nov/24/taiwan-same-sex-marriage-vote-referendum'},
     ],
     vote5: [
-      {'title': 'Taiwan’s image as Asia’s LGBT rights beacon takes a hit as same-sex marriage referendum fails', 'url':'https://www.scmp.com/news/china/politics/article/2174881/taiwans-image-asias-lgbt-rights-beacon-takes-hit-same-sex'},
-      {'title': 'Same-sex marriage referendums: Taiwan Civil Code may remain unchanged', 'url':'https://www.taiwannews.com.tw/en/news/3582617'},
-      {'title': '"A great divide": Inside the battle to stop same-sex marriage in Taiwan', 'url':'https://news.google.com/articles/CAIiEBv4vfa8MUh0cvY-A0uqfp0qGQgEKhAIACoHCAowocv1CjCSptoCMPrTpgU?hl=en-US&gl=US&ceid=US%3Aen'}
+    {'title': 'Taiwan’s image as Asia’s LGBT rights beacon takes a hit as same-sex marriage referendum fails', 'url':'https://www.scmp.com/news/china/politics/article/2174881/taiwans-image-asias-lgbt-rights-beacon-takes-hit-same-sex'},
+    {'title': 'Same-sex marriage referendums: Taiwan Civil Code may remain unchanged', 'url':'https://www.taiwannews.com.tw/en/news/3582617'},
+    {'title': '"A great divide": Inside the battle to stop same-sex marriage in Taiwan', 'url':'https://news.google.com/articles/CAIiEBv4vfa8MUh0cvY-A0uqfp0qGQgEKhAIACoHCAowocv1CjCSptoCMPrTpgU?hl=en-US&gl=US&ceid=US%3Aen'}
     ],
     vote6: [
-      {'title': 'Olympic referendum: Shall it be "Taiwan" or "Chinese Taipei"', 'url':'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=2ahUKEwicgPWItPDeAhXm44MKHcrhC68QFjAHegQIBRAB&url=https%3A%2F%2Fwww.washingtonpost.com%2Fsports%2Folympics%2Folympic-referendum-shall-it-be-taiwan-or-chinese-taipei%2F2018%2F11%2F22%2F2b84b5aa-ee17-11e8-8b47-bd0975fd6199_story.html&usg=AOvVaw2YJIhbevX-pYwvvmrqmqBP'},
-      {'title': 'Taiwan to vote on changing "Chinese Taipei" Olympic name', 'url':'https://www.cnn.com/2018/11/23/asia/taiwan-referendum-olympic-chinese-taipei-intl/index.html'}
+    {'title': 'Olympic referendum: Shall it be "Taiwan" or "Chinese Taipei"', 'url':'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=2ahUKEwicgPWItPDeAhXm44MKHcrhC68QFjAHegQIBRAB&url=https%3A%2F%2Fwww.washingtonpost.com%2Fsports%2Folympics%2Folympic-referendum-shall-it-be-taiwan-or-chinese-taipei%2F2018%2F11%2F22%2F2b84b5aa-ee17-11e8-8b47-bd0975fd6199_story.html&usg=AOvVaw2YJIhbevX-pYwvvmrqmqBP'},
+    {'title': 'Taiwan to vote on changing "Chinese Taipei" Olympic name', 'url':'https://www.cnn.com/2018/11/23/asia/taiwan-referendum-olympic-chinese-taipei-intl/index.html'}
     ],
     vote7: [
-      {'title': 'Taiwan Votes Against Same-Sex Marriage in Referendum', 'url':'http://time.com/5462767/taiwan-same-sex-marriage-referendum/'},
-      {'title': 'Same-sex marriage advocates lose Taiwan referendums', 'url':'https://www.aljazeera.com/news/2018/11/sex-marriage-advocates-lose-taiwan-referendums-181124171649837.html'},
-      {'title': 'Taiwan Voters Reject Legalizing Same-Sex Marriage in Referendum', 'url':'https://www.huffingtonpost.com/entry/taiwan-votes-against-same-sex-marriage_us_5bfac861e4b0771fb6b9daf2'},
+    {'title': 'Taiwan Votes Against Same-Sex Marriage in Referendum', 'url':'http://time.com/5462767/taiwan-same-sex-marriage-referendum/'},
+    {'title': 'Same-sex marriage advocates lose Taiwan referendums', 'url':'https://www.aljazeera.com/news/2018/11/sex-marriage-advocates-lose-taiwan-referendums-181124171649837.html'},
+    {'title': 'Taiwan Voters Reject Legalizing Same-Sex Marriage in Referendum', 'url':'https://www.huffingtonpost.com/entry/taiwan-votes-against-same-sex-marriage_us_5bfac861e4b0771fb6b9daf2'},
     ],
     vote8: [
-      {'title': 'Sex, lies and heated debate: Taiwan prepares to vote in gay marriage referendum', 'url':'https://www.theguardian.com/world/2018/nov/22/taiwan-gay-marriage-referendum-vote'},
+    {'title': 'Sex, lies and heated debate: Taiwan prepares to vote in gay marriage referendum', 'url':'https://www.theguardian.com/world/2018/nov/22/taiwan-gay-marriage-referendum-vote'},
     ],
     vote9: [
-      {'title': '"Go nuclear to go green" irrational', 'url':'http://www.taipeitimes.com/News/editorials/archives/2018/09/19/2003700694'},
-      {'title': 'Taiwan Power Co. respects referendum results but will follow government policy', 'url':'https://www.taiwannews.com.tw/en/news/3583184'},
-      {'title': 'Pro-Nuclear Activists Win Landslide Electoral Victory In Taiwan', 'url':'https://www.forbes.com/sites/michaelshellenberger/2018/11/24/pro-nuclear-activists-win-landslide-electoral-victory-in-taiwan/#16aec9b329a0'},
+    {'title': '"Go nuclear to go green" irrational', 'url':'http://www.taipeitimes.com/News/editorials/archives/2018/09/19/2003700694'},
+    {'title': 'Taiwan Power Co. respects referendum results but will follow government policy', 'url':'https://www.taiwannews.com.tw/en/news/3583184'},
+    {'title': 'Pro-Nuclear Activists Win Landslide Electoral Victory In Taiwan', 'url':'https://www.forbes.com/sites/michaelshellenberger/2018/11/24/pro-nuclear-activists-win-landslide-electoral-victory-in-taiwan/#16aec9b329a0'},
     ],
   };
 
-    
+  
   function makeUL(data) {
 
     var prevList = document.getElementById('readingList');
@@ -111,8 +111,7 @@ function prop_func(x) {
     tmp.appendChild(tmpText);
     item.appendChild(tmp);
     list.appendChild(item);
-    console.log(tmpText, tmp, item, list)
-    })
+  })
 
     // Finally, return the constructed list:
     return list;
@@ -133,4 +132,3 @@ function prop_func(x) {
 
 
 
-  
