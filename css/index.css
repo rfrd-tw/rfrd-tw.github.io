@@ -597,7 +597,7 @@ rect.disabled {
 .scatter-plot {
   width: 18.5em;
   height: 18.5em;
-  margin: 1em 0.5em 2em 1em;
+  margin: 0.5em 0.5em 2em 1em;
 }
 
 .tooltip-scp {
