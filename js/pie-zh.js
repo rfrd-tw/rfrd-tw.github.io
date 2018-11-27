@@ -27,7 +27,7 @@ var width = parseInt($('#chart').width());
 var height = 300;
 
 // chart colors
-var colors = ["#423c3e", "#f2f5f4", "#f51fb3", "#e7f94d", "#e7f94d", "#fb5ed3","#f51fb3","#cc0699","#960677","#630551"];
+var colors = ["#fc00f6", "#e7f94d", "#f2f5f4", "#423c3e", "#e7f94d", "#fb5ed3","#f51fb3","#cc0699","#960677","#630551"];
 
 // a circle chart needs a radius
 var radius = Math.min(width, height) / 2;

@@ -1,4 +1,4 @@
-case,同意票,反對票,廢票,未投票,yes votes over total eligible voters,total eligible voters
+case,Yes votes,No votes,Invalid votes,Did not vote,yes votes over total eligible voters,total eligible voters
 7,"7,955,753","2,109,157","715,140","8,977,017",40.27%,"19,757,067"
 8,"7,599,267","2,346,316","823,945","8,987,539",38.46%,"19,757,067"
 9,"7,791,856","2,231,425","756,041","8,977,745",39.44%,"19,757,067"

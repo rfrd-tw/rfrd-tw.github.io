@@ -7,7 +7,6 @@
 }
 #mainNav .navbar-brand {
   font-weight: 700;
-  text-transform: uppercase;
   color: #fc00f6;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -18,7 +17,6 @@
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
   font-size: 0.9rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: #212529;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -105,7 +103,6 @@
 
 .btn {
   font-weight: 300;
-  text-transform: uppercase;
   border: none;
   border-radius: 300px;
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -220,7 +217,7 @@ h6 {
 }
 
 .bg-map7 {
-  background-color: #f51fb3;
+  background-color: #fc00f6;
 }
 
 .bg-map8 {
@@ -458,7 +455,6 @@ header.masthead #nav-rfrd a {
 .small-title {
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .project-name {
