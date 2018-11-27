@@ -55,12 +55,13 @@ d3.csv("data/data_en.csv").then(function(data) {
 				scpDiv = scatterDiv
 				.append("div")
 				.attr("id", "scp"+i+"-plot")
-				.attr("class", "scatter");
+				.attr("class", "scatter-plot");
 			}
 
 			const svg = scpDiv.append("svg")
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
+			.attr("transform", "translate(" + (-margin.left) + "," + margin.top + ")")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 			.attr("class", "plot-g");
