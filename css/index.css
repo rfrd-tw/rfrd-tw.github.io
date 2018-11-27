@@ -193,19 +193,19 @@ h6 {
 }
 
 .bg-map1 {
-  background-color: #ffffff;
-}
-
-.bg-map2 {
   background-color: #f9f8de;
 }
 
-.bg-map3 {
+.bg-map2 {
   background-color: #ffff99;
 }
 
-.bg-map4 {
+.bg-map3 {
   background-color: #e7f94d;
+}
+
+.bg-map4 {
+  background-color: #EBDDA0;
 }
 
 .bg-map5 {
@@ -213,15 +213,15 @@ h6 {
 }
 
 .bg-map6 {
-  background-color: #ff80e7;
+  background-color: #FE5AEB;
 }
 
 .bg-map7 {
-  background-color: #fc00f6;
+  background-color: #C861C4;
 }
 
 .bg-map8 {
-  background-color: #4c003e;
+  background-color: #000;
 }
 
 .bg-map-invalid {
