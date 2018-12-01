@@ -105,7 +105,7 @@ path.on('mouseover', function(d) {  // when mouse enters div
 
  var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
  pie_tooltip.select('.label').html(d.data.label); // set current label           
- pie_tooltip.select('.count').html(formatComma(d.data.count)+'票'); // set current count            
+ pie_tooltip.select('.count').html(formatComma(d.data.count)+'votes'); // set current count            
  pie_tooltip.select('.percent').html(percent + '%'); // set percent calculated above          
  pie_tooltip.style('display', 'block'); // set display                     
 });                                                           
